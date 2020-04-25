@@ -39,7 +39,7 @@ services:
 
   butch-jekyll:
     working_dir: /data
-    image: butchland/fastpages-jekyll
+    image: butchland/fastpages-jekyll-butch
     restart: unless-stopped
     ports:
       - "4000:4000"

@@ -31,7 +31,7 @@ butch-build: .FORCE
 	chmod 777 Gemfile.lock
 	docker-compose stop || true; docker-compose rm || true;
 	docker build --no-cache -t hamelsmu/fastpages-nbdev -f _action_files/fastpages-nbdev.Dockerfile .
-	docker build --no-cache -t butchland/fastpages-jekyll -f _action_files/fastpages-jekyll-butch.Dockerfile .
+	docker build --no-cache -t butchland/fastpages-jekyll-butch -f _action_files/fastpages-jekyll-butch.Dockerfile .
 	docker-compose build --force-rm --no-cache
 
 # rebuild the services WITH cache
@@ -44,7 +44,7 @@ quick-build: .FORCE
 butch-quick-build: .FORCE
 	docker-compose stop || true;
 	docker build -t hamelsmu/fastpages-nbdev -f _action_files/fastpages-nbdev.Dockerfile .
-	docker build -t butchland/fastpages-jekyll -f _action_files/fastpages-jekyll-butch.Dockerfile .
+	docker build -t butchland/fastpages-jekyll-butch -f _action_files/fastpages-jekyll-butch.Dockerfile .
 	docker-compose build 
 
 # convert word & nb without Jekyll services
@@ -68,8 +68,14 @@ bash-nb: .FORCE
 bash-jekyll: .FORCE
 	docker-compose exec jekyll /bin/bash
 
+butch-bash-jekyll: .FORCE
+	docker-compose exec butch-jekyll /bin/bash
+
 # restart just the Jekyll server
 restart-jekyll: .FORCE
 	docker-compose restart jekyll
+
+butch-restart-jekyll: .FORCE
+	docker-compose restart butch-jekyll
 
 .FORCE:
