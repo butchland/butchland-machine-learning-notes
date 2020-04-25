@@ -6,10 +6,18 @@ server: .FORCE
 	docker-compose down --remove-orphans || true;
 	docker-compose up
 
+butch-server: .FORCE
+	docker-compose down --remove-orphans || true;
+	docker-compose up fastpages converter watcher butch-jekyll
+
 # start (or restart) the services in detached mode
 server-detached: .FORCE
 	docker-compose down || true;
 	docker-compose up -d
+
+butch-server-detached: .FORCE
+	docker-compose down || true;
+	docker-compose up -d fastpages converter watcher butch-jekyll
 
 # build or rebuild the services WITHOUT cache
 build: .FORCE
@@ -19,11 +27,24 @@ build: .FORCE
 	docker build --no-cache -t hamelsmu/fastpages-jekyll -f _action_files/fastpages-jekyll.Dockerfile .
 	docker-compose build --force-rm --no-cache
 
+butch-build: .FORCE
+	chmod 777 Gemfile.lock
+	docker-compose stop || true; docker-compose rm || true;
+	docker build --no-cache -t hamelsmu/fastpages-nbdev -f _action_files/fastpages-nbdev.Dockerfile .
+	docker build --no-cache -t butchland/fastpages-jekyll -f _action_files/fastpages-jekyll-butch.Dockerfile .
+	docker-compose build --force-rm --no-cache
+
 # rebuild the services WITH cache
 quick-build: .FORCE
 	docker-compose stop || true;
 	docker build -t hamelsmu/fastpages-nbdev -f _action_files/fastpages-nbdev.Dockerfile .
 	docker build -t hamelsmu/fastpages-jekyll -f _action_files/fastpages-jekyll.Dockerfile .
+	docker-compose build 
+
+butch-quick-build: .FORCE
+	docker-compose stop || true;
+	docker build -t hamelsmu/fastpages-nbdev -f _action_files/fastpages-nbdev.Dockerfile .
+	docker build -t butchland/fastpages-jekyll -f _action_files/fastpages-jekyll-butch.Dockerfile .
 	docker-compose build 
 
 # convert word & nb without Jekyll services

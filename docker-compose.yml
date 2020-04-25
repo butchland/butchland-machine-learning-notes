@@ -37,3 +37,15 @@ services:
      bash -c "gem install bundler
      && jekyll serve --trace --strict_front_matter"
 
+  butch-jekyll:
+    working_dir: /data
+    image: butchland/fastpages-jekyll
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/data/
+    command: >
+     bash -c "gem install bundler
+     && jekyll serve --trace --strict_front_matter"
+
