@@ -1,0 +1,36 @@
+.site-header {
+    background-color: #111114;
+    display: block;
+    padding: 0px 0 36px 0;
+    text-align: center;
+}
+.site-title, .site-title:visited {
+    color: #ccc;
+    margin: 0 0 20px 0;
+    font-size: 2.75rem;
+    font-weight: 300;
+    font-family: Open Sans, sans-serif;
+}
+.site-nav {
+    width: 100%;
+    background: #000;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    margin-bottom: 4rem;
+    display: inline-block;
+    border-left: 1rem solid #ED5276cc;
+    position: static;
+    float: none;
+    border: none;
+    background-color: inherit;
+    text-align: left;
+}
+
+.site-nav .page-link {
+    color: #337ab7;
+    font-size: 1.1rem;
+}
+/*
+
+
+*/
