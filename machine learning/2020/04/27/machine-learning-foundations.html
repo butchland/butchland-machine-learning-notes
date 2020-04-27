@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Machine Learning Foundations | Butch Landingin’s Machine Learning Notes</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Machine Learning Foundations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My rambling notes on machine learning" />
+<meta property="og:description" content="My rambling notes on machine learning" />
+<link rel="canonical" href="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations.html" />
+<meta property="og:url" content="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations.html" />
+<meta property="og:site_name" content="Butch Landingin’s Machine Learning Notes" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-27T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"My rambling notes on machine learning","@type":"BlogPosting","headline":"Machine Learning Foundations","dateModified":"2020-04-27T00:00:00-05:00","datePublished":"2020-04-27T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations.html"},"url":"https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/butchland-machine-learning-notes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" /><link rel="shortcut icon" type="image/x-icon" href="/butchland-machine-learning-notes/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/about/">About</a><a class="page-link" href="/butchland-machine-learning-notes/search/">Search</a><a class="page-link" href="/butchland-machine-learning-notes/categories/">Tags</a></div>
+      </nav><a class="site-title" rel="author" href="/butchland-machine-learning-notes/">Butch Landingin&#39;s Machine Learning Notes</a>
+
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Machine Learning Foundations</h1><p class="page-description">My rambling notes on machine learning</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-04-27T00:00:00-05:00" itemprop="datePublished">
+        Apr 27, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      32 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/butchland-machine-learning-notes/categories/#machine learning">machine learning</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#introduction-to-machine-learning-deep-learning-and-neural-networks">Introduction to Machine Learning, Deep Learning and Neural Networks</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#outline-and-topics">Outline and Topics</a></li>
+<li class="toc-entry toc-h2"><a href="#foundations">Foundations</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#machine-learning">Machine Learning</a></li>
+<li class="toc-entry toc-h3"><a href="#model-training">Model Training</a></li>
+<li class="toc-entry toc-h3"><a href="#the-model-as-a-function">The Model as a Function</a></li>
+<li class="toc-entry toc-h3"><a href="#neural-network-models-and-neurons">Neural Network Models and Neurons</a></li>
+<li class="toc-entry toc-h3"><a href="#parameters-weights-and-biases">Parameters, Weights and Biases</a></li>
+<li class="toc-entry toc-h3"><a href="#neural-network-layers">Neural Network Layers</a></li>
+<li class="toc-entry toc-h3"><a href="#activation-functions">Activation Functions</a></li>
+<li class="toc-entry toc-h3"><a href="#architecture">Architecture</a></li>
+<li class="toc-entry toc-h3"><a href="#deep-learning">Deep Learning</a></li>
+<li class="toc-entry toc-h3"><a href="#an-image-recognition-example">An Image Recognition Example</a></li>
+<li class="toc-entry toc-h3"><a href="#training-the-model">Training the Model</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#supervised-learning-and-other-types-of-learning">Supervised Learning and Other Types of Learning</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#gradient-descent">Gradient Descent</a></li>
+<li class="toc-entry toc-h3"><a href="#stochastic-gradient-descent">Stochastic Gradient Descent</a></li>
+<li class="toc-entry toc-h3"><a href="#hyperparameters">Hyperparameters</a></li>
+<li class="toc-entry toc-h3"><a href="#linear-functions-and-activation-functions">Linear Functions and Activation Functions</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#an-alternate-formulation-of-the-linear-function-and-an-explanation-for-usage-of-the-word-bias">An alternate formulation of the Linear function (and an explanation for usage of the word bias)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#activation-functions-1">Activation Functions</a></li>
+<li class="toc-entry toc-h3"><a href="#loss-functions">Loss functions</a></li>
+<li class="toc-entry toc-h3"><a href="#metrics">Metrics</a></li>
+<li class="toc-entry toc-h3"><a href="#overfitting-and-validation-sets">Overfitting and Validation Sets</a></li>
+<li class="toc-entry toc-h3"><a href="#using-the-metrics-to-improve-the-model">Using the metrics to improve the model</a></li>
+<li class="toc-entry toc-h3"><a href="#test-datasets">Test Datasets</a></li>
+<li class="toc-entry toc-h3"><a href="#tracking-the-performance-of-the-model-during-training">Tracking the performance of the model during training</a></li>
+<li class="toc-entry toc-h3"><a href="#parameter-initialization-and-transfer-learning">Parameter Initialization and Transfer Learning</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#footnotes">Footnotes</a></li>
+</ul>
+</li>
+</ul><h1 id="introduction-to-machine-learning-deep-learning-and-neural-networks">
+<a class="anchor" href="#introduction-to-machine-learning-deep-learning-and-neural-networks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to Machine Learning, Deep Learning and Neural Networks</h1>
+
+<p><em>These notes are my attempt to implement Feynman’s method of
+learning, whereby, from memory (with as few glances to Wikipedia as I can), 
+I attempt to reconstruct my understanding of deep learning so far.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup></em></p>
+
+<p><em>Since I am trying to recreate this from memory, I may not have references to some of the stuff I’m saying – but every now and then, as I update this (and possibly other) document, I might include them just to make it easy to confirm what I’m saying.</em></p>
+
+<p><em><strong>Last note:</strong> this document will be rambling jumble of thoughts that hopefully over time will be reorganized better into a wiki. There will be lots of repetition of ideas and maybe some of it will be wrong, but as I go over them, hopefully this will occur less and less.</em></p>
+
+<p><em><strong>Last last note:</strong> I am writing this from the perspective of me trying to explain to a fellow developer how machine learning works. Its not very in depth yet, but over time I hope to go
+deeper into the topics all the way to showing the code while explaining the theory.</em></p>
+
+<h2 id="outline-and-topics">
+<a class="anchor" href="#outline-and-topics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Outline and Topics</h2>
+
+<ul>
+  <li>
+    <p>Definitions - <em>I still plan to organize this – this is just a plan for what topics to cover.</em>)</p>
+
+    <ul>
+      <li>Machine Learning</li>
+      <li>Neural Network Model</li>
+      <li>Model Training</li>
+      <li>Deep Learning</li>
+      <li>Gradient</li>
+      <li>Gradient Descent</li>
+      <li>Stochastic Gradient Descent</li>
+      <li>Loss and Loss Function</li>
+      <li>Activation Function</li>
+      <li>Linear Function</li>
+      <li>Optimization</li>
+      <li>Learning Rate</li>
+      <li>Training, Validation and Test Datasets</li>
+      <li>Parameter Initialization and Transfer Learning</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="foundations">
+<a class="anchor" href="#foundations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Foundations</h2>
+
+<h3 id="machine-learning">
+<a class="anchor" href="#machine-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Machine Learning</h3>
+
+<p><strong>Machine Learning (ML)</strong> is an alternative way of programming a computer whereby a computer learns to perform some task by being given some examples.</p>
+
+<p>This is in contrast to the <em>usual</em> way of programming computers to do a task by specifying the steps in some detail.</p>
+
+<p>The mechanism by which ML accomplishes this process of learning to do tasks through examples is by using neural network models.</p>
+
+<p>A <strong>Neural Network Model</strong> is a program that can learn to perform tasks by being shown examples.</p>
+
+<p>Using a set of given examples, a model:</p>
+<ul>
+  <li>tries to perform a task, and</li>
+  <li>its performance (i.e. how well it performs that task) is then measured, and</li>
+  <li>that measurement is then used to adjust the model in such a way that affects (hopefully improves) its performance.</li>
+</ul>
+
+<p>As a concrete example, if we wanted to create a cat-dog image recognition program, we could start with a model and a lot of cat and dog images.</p>
+
+<ul>
+  <li>
+    <p>The model first tries to predict that given the images as input, it makes guesses as to whether each example is a cat or dog.</p>
+  </li>
+  <li>
+    <p>Its performance (whether it guessed correctly or not) is then measured in some way,</p>
+  </li>
+  <li>
+    <p>And that measurement is then used to adjust the model so that the next time it tries to make a prediction, it does a better task.</p>
+  </li>
+  <li>
+    <p>And the task is repeated again and again, with the model (hopefully) continually improving until its good enough at distinguishing cats from dogs.</p>
+  </li>
+</ul>
+
+<h3 id="model-training">
+<a class="anchor" href="#model-training" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Training</h3>
+
+<p>This process of performing a task, measuring its performance, and adjusting the model is known as <strong>training the model</strong> or model training.</p>
+
+<p>Once a model’s performance reaches an optimum level (e.g. a cat-dog image recognition neural network model correctly distinguishes cats from dogs 99.995% of the time), it can then be used to perform that task just like any other computer program.</p>
+
+<h3 id="the-model-as-a-function">
+<a class="anchor" href="#the-model-as-a-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Model as a Function</h3>
+
+<p>A good way to approach machine learning is to look at a Neural Network Model as a function that computes an output given a set of inputs.</p>
+
+<h3 id="neural-network-models-and-neurons">
+<a class="anchor" href="#neural-network-models-and-neurons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Neural Network Models and Neurons</h3>
+
+<p>A model is basically a function that is composed of a set of processing units interconnected in a particular architecture. Each processing unit is called a <strong>neuron</strong> or a node, and each neuron takes in a set of inputs (which are numerical input values), and outputs a result (the numerical output value). So we can also consider these neurons as functions as well.</p>
+
+<h3 id="parameters-weights-and-biases">
+<a class="anchor" href="#parameters-weights-and-biases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters, Weights and Biases</h3>
+
+<p>Associated with each neuron is a set of <strong>parameters</strong>. This set of parameters can be further divided into <strong>weights</strong> and <strong>biases</strong>. Associated with <em>each input</em> to a neuron is a <strong>weight</strong>, which is a type of a parameter. Associated with <em>each neuron</em> itself is a <strong>bias</strong>, which is the other type of parameter. The output of each neuron can then be the inputs to another set of neurons, which combine inputs and outputs to inputs and outputs of other sets of neurons and to finally to output a result (which may be a category, a number or a set of numbers) which is the output of the model itself.</p>
+
+<h3 id="neural-network-layers">
+<a class="anchor" href="#neural-network-layers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Neural Network Layers</h3>
+
+<p>These neurons are usually organized into <strong>layers</strong>, with the outputs of one layer of neurons feeding into the inputs of the next layer of neurons.</p>
+
+<h3 id="activation-functions">
+<a class="anchor" href="#activation-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activation Functions</h3>
+
+<p>Between the connections of these neurons are the <strong>activation functions</strong>, which transform the output of the previous layer in some way before feeding it as the input of the next layer.</p>
+
+<h3 id="architecture">
+<a class="anchor" href="#architecture" aria-hidden="true"><span class="octicon octicon-link"></span></a>Architecture</h3>
+
+<p>The way these layers interconnect their neurons is known as the <strong>architecture</strong> of the model.</p>
+
+<h3 id="deep-learning">
+<a class="anchor" href="#deep-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deep Learning</h3>
+
+<p><strong>Deep learning</strong> is the term associated with the usage of neural networks that have many layers and is the primary reason for the revival of machine learning as a useful tool in many fields today.</p>
+
+<h3 id="an-image-recognition-example">
+<a class="anchor" href="#an-image-recognition-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>An Image Recognition Example</h3>
+
+<p>As an example, we can say that a trained cat-dog image recognition neural network model is a function that can take as an input an image and outputs a result, telling us whether the image is a picture of a cat or a dog.</p>
+
+<p>The way we can make the model do this is by adjusting the parameters of the model in such a way that it can do the task of image recognition – recognizing cats from dogs.</p>
+
+<p>So now the problem becomes how do we come up with a set of parameters for the model so that it does the task well. This is done by training the model with example images of cats and dogs.</p>
+
+<h3 id="training-the-model">
+<a class="anchor" href="#training-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training the Model</h3>
+
+<p>In order to train a model, it is given a set of inputs, known as the training dataset (which for the image
+recognition task of distinguishing cats from dogs, the inputs are images of cats and dogs).</p>
+
+<p>Aside from the input data, there needs to be some target output (also called a label) associated with each input, which in the case of cat-dog image recognition task, is a label telling us that each input image is either a cat or a dog. So we can’t just have pictures of cats and dogs, we need to have <em>labelled</em> examples of 
+cat and dog images.</p>
+
+<p>The task of an image recognition model is then, given an input image, is to make a prediction, i.e. output a result. This result is then compared to the target output (i.e. the correct label) for each input image.</p>
+
+<p>How much the model output is right or wrong for each input (for classification tasks), or how far the model is wrong or right for a continuous value (for regression tasks) is known as the <strong>loss</strong>. The loss is usually (but not necessarily always) computed in such a way that the more accurate or better the model is in making a prediction, the smaller the loss.</p>
+
+<p>This function that measures the difference between the target output versus the output predicted by the model is known as the <strong>loss function</strong>. So we can say that the loss function which the one that produces a measure of a model’s performance.</p>
+
+<p>Once a loss is computed (this is a numerical value that indicates how well a model is doing its task, usually the smaller the better), the next step is to improve or optimize the model’s performance by adjusting the weights.</p>
+
+<p>How it does that computation of the adjustment is done by an algorithm known as Gradient Descent, which is one of the secret ingredients (if ever there was one) behind the power of neural networks.</p>
+
+<h4 id="supervised-learning-and-other-types-of-learning">
+<a class="anchor" href="#supervised-learning-and-other-types-of-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supervised Learning and Other Types of Learning</h4>
+
+<p>Because this machine learning process uses a set of labelled data (associated with each input data is the target result or label, whether this is a category or a continuous number) which used to check the models predictions if they correct or not (in other words, the  labels are used to supervise whether the model is behaving correctly), it is called <strong>supervised learning</strong>.</p>
+
+<p>There are other methods that don’t use labels as such – as in <strong>unsupervised learning</strong> where the model uses unlabeled data to extract patterns that maybe useful in classifying the data. Another approach is called <strong>semi-supervised or self-supervised learning</strong> where the labels maybe embedded in the input data itself.</p>
+
+<p>An example of this is in <strong>Natural Language Processing (NLP)</strong> where models might use text from Wikipedia and other sources as the input data and the model is trained such that it can extract the patterns from the underlying language, for example, in language generation, such that given a sequence of words, the model is able to predict the next word or next sets of words that will appear in a sentence or paragraph. The “labels” as such are embedded or latent in the data of the text itself, so while there is no explicit label, the goal is to create a model, given a start of a sentence, might be capable of being able predict what the missing word or words might be. So the goal or loss function might be to improve the accuracy of the prediction and therefore a model can be trained this way, despite the input data not having explicit labels associated with it.</p>
+
+<p>Another area of machine learning is Reinforcement Learning, where a model takes on a task such as playing a video game or Go or chess, where the loss function is to minimize its losses (and/or maximize its wins). And by playing against a copy of itself, the model learns what strategies leads to success or failures and keeps improving and improving until, for example, it could beat their human counterparts.</p>
+
+<p>This article will be focused primarily on supervised learning as this is the basic building block for all the other methods.</p>
+
+<h3 id="gradient-descent">
+<a class="anchor" href="#gradient-descent" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gradient Descent</h3>
+
+<p>As stated previously, <strong>Gradient Descent</strong> is the process that models use in order to adjust their parameters towards some goal.</p>
+
+<p>We can think of the neural network as a whole (even though it is actually composed of layers and layers of neurons) as actually just being a function. It is a function that outputs a y given a set of inputs x. Moreover, it outputs the y based on input x and a set of parameters w (weights) and b (biases).</p>
+
+<p>So given a fixed set of inputs x (e.g. a set of N samples of images), modifying the parameters w and b slightly will cause the model to output a slightly different result and hopefully a change in the loss. The change in the loss (delta of the loss) resulting from a slight change of the parameter (delta of the parameter) is known as the <strong>gradient</strong>. For linear functions, this gradient is also known as the slope (or rise/run). In other words, a gradient for a parameter tells us how changing that parameter (which may number in the thousands for a typical model) affects the loss.</p>
+
+<p>Once we know the gradients of the parameters, we can then adjust the parameters in such a way as to reduce
+the loss (in other words, improve the performance).</p>
+
+<p>Gradient Descent works by computing the gradients of parameters p with respect to a given set of inputs x and its computed outputs yhat , the target outputs y and the resulting loss (<em>a math like jargon definition</em>)</p>
+
+<p>Each parameter is then updated (reduced or increased) by an amount equal to the gradient of that parameter multiplied by a factor known as the Learning Rate.</p>
+
+<p>Then the model is tested again, by computing the output yhat given the input x and the adjusted parameters p.
+The loss is then again computed based on the adjusted parameters. If done correctly, the loss should now be smaller and the model improves its performance.  Looping through this process (and keeping track of its performance) again and again, will theoretically, eventually result in a model that can be good enough for the targeted task.</p>
+
+<p>The process by which a model computes a loss using a loss function, computes the gradients of the parameters with respect to that loss, and the update of the parameters in order to improve its performance is known as <strong>optimization</strong> and is done by another component (not part of the model) known as an <strong>optimizer</strong>.</p>
+
+<p>The process of computation of the gradients is known as <strong>backpropagation</strong>.</p>
+
+<p>The process of the neurons’ computation of the inputs into their outputs and subsequent input to the next layer of neurons all the way through the layers to output a predicted result for the model is known as <strong>forward propagation</strong>.</p>
+
+<p>One important function that needs to happen during forward propagation phase is that the framework that is used to implement the neural network models needs to keep track of the calculations being done by the neurons on the parameters, the activation functions all across the layers of the model up to the calculation of the loss.</p>
+
+<p>This sequence of calculations, or more accurately, graph of calculations is known as the model’s <strong>computational graph</strong>. This computational graph is then used by the framework to compute the parameters’ gradients in the backpropagation phase of the training.</p>
+
+<p>When the trained model is used to compute a prediction based on a new set of inputs (such as in model deployed in production), this forward propagation is also called inference. Normally, during inference, the model is still forward propagation, but the framework no longer needs to create a computational graph because it doesn’t need to compute the gradients of the parameters – the gradients are only needed when we plan to update the parameters, but computing the output does not need the gradients, and are usually turned off.</p>
+
+<h3 id="stochastic-gradient-descent">
+<a class="anchor" href="#stochastic-gradient-descent" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stochastic Gradient Descent</h3>
+
+<p>In the process we described above, we assumed our computation of loss (and the subsequent computation of the gradients) based on all the samples of the training data once every epoch (where an epoch is one pass through all training data).</p>
+
+<p>In practice, this is very hard to do, due to limitations of GPU hardware (usually memory) in which the operations to compute the predictions, computation of the loss, computation of the gradients, and update of the parameters are all done by a GPU so these pieces of data need to be stored in GPU memory which might be less than the memory available for the CPU.</p>
+
+<p>The reason we have to use a GPU is because the number of parameters can be very large and while the operations might be simple (multiplication, addition, differentiation (aka computation of the gradients) - even differentiation is just multiplication and adddition), there needs to be lots of them, and GPUS are ideal for this soft of computation because they can be parallelized.</p>
+
+<p>One alternative to computing the loss for the all the samples at once, is to compute the loss (and the subsequent gradients) for each sample of input data (e.g. one image at a time) and update the weights as we pass through all the samples. In this extreme case, an epoch (where an epoch is one pass through all your training data) consists of N passes of the training loop given N samples of training data. This is known as online or sequential gradient descent and is considered a variant of stochastic gradient descent.</p>
+
+<p>A more common alternative is the middle ground where we take a batch of n input samples at a time (call this batch size bs) and compute the loss, compute the gradients and adjust the parameters for the entire batch. This means that as the model goes through each batch, the model is computing the loss from each batch and applying the update to the model’s parameters to be used for the predictions of the next batch to see if its update does result in a lower loss (i.e. improve the model’s performance).</p>
+
+<p>So for a given batch size <em>bs</em>, there will be <em>m</em> batches where <em>m</em> is equal to <em>N</em> input samples divided by the batch size <em>bs</em>. This means that for each epoch, there will be <em>m</em> passes through the training loop. This is known as batch gradient descent and is also considered as a variant of stochastic gradient descent.</p>
+
+<p>This can maximize the utilization of the GPU as we can adjust the batch size so that the entire input data for each batch plus the parameters can fit into the GPU memory.</p>
+
+<p>Also, we can also consider online or sequential gradient descent as a batch gradient descent with a batch size of one.</p>
+
+<p><em>As an aside, Stochastic means randomly determined. The reason why the we call the online and batch gradient descent stochastic is because they replace the computation of the loss of the entire input data with a stochastic (random) approximation (based on a sample subset of the input data). Moreover, as the same input data is read passed through each epoch, the contents of each batch are usually shuffled, resulting in a set of parameters that can better approximate the parameters for the entire input data through random sampling.</em></p>
+
+<h3 id="hyperparameters">
+<a class="anchor" href="#hyperparameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hyperparameters</h3>
+
+<p>The learning rate, the batch size and the number of epochs are the tweaks in the way we train our model, and along with lots of others (including the architecture), are known as hyperparameters. Learning to pick what good values to set these to will, (along with how good your training data is, as well) determine how quickly or how well we can build a model to perform a target task.</p>
+
+<p>Unfortunately, at this point, this process of finding the right hyperparameters is as much as an art and a skill that can only be developed through experience, although there might be some rules of thumb that we can follow. Often, the only way to know is by trying things out and is often a source of challenge as much as a source of frustration for deep learning practitioners.</p>
+
+<h3 id="linear-functions-and-activation-functions">
+<a class="anchor" href="#linear-functions-and-activation-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear Functions and Activation Functions</h3>
+
+<p>The most common function used in the neurons that compose the layers of neural networks is the <em>linear function wx + b</em>, where x represents the inputs, w the weights and b is the bias. In order for a neuron (or a layer of neurons) to implement Gradient Descent, it is important that its function be differentiable, meaning a gradient can be computed on the parameters w and b given a loss function that computes the output of the last layer of the model.</p>
+
+<p>It is also important to note that for each layer in the neural network , the input x might be a set of numbers, e.g. a vector or a matrix of numbers, and that the weights can also be matrices and biases can also be vectors, so a more accurate depiction of the linear equation is w@x + b where @ represents a matrix multiplication.</p>
+
+<h4 id="an-alternate-formulation-of-the-linear-function-and-an-explanation-for-usage-of-the-word-bias">
+<a class="anchor" href="#an-alternate-formulation-of-the-linear-function-and-an-explanation-for-usage-of-the-word-bias" aria-hidden="true"><span class="octicon octicon-link"></span></a>An alternate formulation of the Linear function (and an explanation for usage of the word bias)</h4>
+
+<p><em>As an alternate formulation, the linear equation w@x + b can also be expressed as w@x, but with the
+slight modification of the x inputs – the addition of an input(possible a vector) = 1 and the weights w incorporating the bias at the end of the matrix. So the inputs always include an additional input that is always equal to 1 while the weights now incorporate the bias as the last column. multiplying the input of 1 with the weight b is equal to b – so this is equivalent to w@x + b. The reason why it is called bias is that a bias is a term used in electrical circuits for a component that raises the output to a constant value - even when the rest of the inputs are zero. The advantage of this formulation is that it simplifies differentiation (i.e. the computation of the gradients, since everything that needs to be differentiated is in the matrix w, including the bias, albeit at the expense of having to add an extra input value equal to 1 during the computation of the prediction)</em></p>
+
+<h3 id="activation-functions-1">
+<a class="anchor" href="#activation-functions-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activation Functions</h3>
+
+<p>Activation functions on the other hand are transformations between the outputs of one layer to the inputs of the next layer. Their function is to introduce a non-linearity between the linear functions of the neurons.</p>
+
+<p>Mathematically, tying together the output of a linear function to the input of another linear function is actually equivalent to just another linear function. So if the neural network was simply composed of layers of neurons computing linear equations linked directly (i.e. their output was fed directly) to the next layer of neurons also computing linear equations down the line, it would simply be equivalent to a single layer of neurons computing linear equations. And neural networks composed only of one layer are not going to be able to do the feats that deep learning neural networks have become famous for.</p>
+
+<p>An example of a non-linear function is the ReLU or rectified linear unit. In practical terms, its just a function that replicates (and outputs) the input if the input is greater than zero, otherwise, it just outputs zero. In other words, it just zeroes out the negative outputs and passes on the positive outputs.</p>
+
+<p>Now, this may not sound such a radical transformation, but this, along with the Gradient Descent, allows any neural network to theoretically approximate any function, given a set of inputs. This capability of neural networks to approximate any computation for a given set of inputs is known as the Universal Approximation Theorem. If anything, activation functions are the other secret ingredient behind the power of neural networks.</p>
+
+<h3 id="loss-functions">
+<a class="anchor" href="#loss-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loss functions</h3>
+
+<p>An important characteristic of a good loss function is that it should be sensitive to changes in the parameters, i.e. slight changes to the parameters should also change the computed loss. This is so that when we differentiate the loss function and compute the gradients of the parameters, the change in the loss will result in non-zero values for the gradients. This, in turn, will trigger a change in the parameters (because they are adjusted by an amount equal to the value of the gradient multiplied by a factor known as the learning rate) for the iteration of the training loop.</p>
+
+<p>If a loss function was not sensitive to changes in the parameters (i.e. slight changes in the parameter results in the same value of loss), then gradients computed would be zero and so the adjustment would also be zero (zero gradient times any value of learning rate is also zero) and would end up in no change in the parameters (ad infinitum). At this point, the model would no longer be improving – another way of saying that the model is no longer learning.</p>
+
+<p>We can visualize the all possible parameter values as occupying a multi-dimensional space and the loss function maps each point in this space to a numerical value (given a fixed set of inputs). Moving slightly from one point in this parameter space to another point results in another value for the loss.  A bad loss function is one with lots of flat areas (i.e. zero gradients) while good loss functions would have hills and valleys leading down to (hopefully) a global minimum or at least something close to it.</p>
+
+<p>The goal of training the model is to find a multidimensional point in this parameter space (in other words the set of parameters ws and biases for the entire model) that computes a minimum loss for the entire training data.</p>
+
+<h3 id="metrics">
+<a class="anchor" href="#metrics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Metrics</h3>
+
+<p>While we’ve already talked a little bit about loss functions and how they’re used to improve the model using gradient descent, from a practical perspective, what we really care about a model’s performance is known as its metrics.</p>
+
+<p>So a metric is also a measurement of the performance of a model, but unlike the loss function, it doesn’t have to be differentiable, it just has to be a reasonable measure of performance from the practitioner’s perspective. Sometimes you can use the loss as the metric, but you might be able to use something more appropriate and understandable.</p>
+
+<p>One of the most common metrics (especially for classification) we use is error rate - given a sample of N inputs, how many mistakes (or wrongly classified) M did it make, and the error rate is M divided by N. The lower it is, the better. Zero error rate means no mistakes. As an alternative, we can also take accuracy – which is just 1 - error rate (or how many correct responses did the model make given N input samples).</p>
+
+<p>For regression tasks (where the model is predicting a continuous value), the MSE or Mean Squared Error or 
+its square root (aka RMSE) can be used as a metric. Note that in this case, the MSE can also be used as the loss function.</p>
+
+<h3 id="overfitting-and-validation-sets">
+<a class="anchor" href="#overfitting-and-validation-sets" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overfitting and Validation Sets</h3>
+
+<p>The next question is to what set of samples do we apply the metrics to? If we simply use the training data, it is very easy to get zero error rates (usually). But when we actually try to use the model in production, we might get disappointed and not get the same performance (metric wise) that we got during training.</p>
+
+<p>The reason for this might be that our model has been optimized to such an extent that its has become so  specialized so as to match the training data that it is no longer performs as well on data that you use during production.</p>
+
+<p>The model might have seen your training data so many times that it has sort of “memorized” it and can give good predictions on it but it won’t necessarily perform well on data it hasn’t seen during training. This situation where the model performs (both the loss and your metrics) well on your training data but doesn’t do so well on data it didn’t see during training is known as overfitting.</p>
+
+<p>In order to counter this, and to also have a better estimate of the model’s performance when we deploy it during production, we can simulate this set of data we will encounter during production by setting aside some of our labelled data that we would normally use for training the model to be used to validate its performance. This set of data is what we call our validation data, as distinct from the training data.</p>
+
+<p>This validation data is where we apply our metrics in order to get an estimate of the performance of our model when we deploy it in production. These metrics are much less useful when we apply them to our training data because they won’t give a good estimate of the model’s performance when used in production (often, they inflate the performance and give us a false sense of confidence). This is why we mostly track our metrics against the validation data, not on the training data.</p>
+
+<p>Also, it is also very important to note that our training and validation data that we use for training the model as well as estimating its performance should be as representative as possible of the data that we will actually encounter when we deploy the model into production.</p>
+
+<p>This is important for the training data, as the model can only learn based on the input data that it encounters, and may not perform as well on data that is very different that it may encounter during production.</p>
+
+<p>This is also important for the validation data, because if the validation data is not representative of the data it will encounter in production, we might have a  wrong estimate the performance of the model when it is actually used in production if we base it on the metrics we measure on the validation data.</p>
+
+<p>The last point we need to make is that we need to split the validation data from the training data in such a way that the data we use in the validation set is representative of the data we will encounter in production. So for example, if in production, we will have images of cats and dogs that we didn’t have in our training data, then our validation data should also have images of cats and dogs that are not part of our training data.</p>
+
+<p>If didn’t do this, and we use the same images in both our training and validation data, then its quite possible that we would score high on our metric (because it may have “memorized” the training data) but most certainly perform worse when we actually use it in production.</p>
+
+<p>One way to approach this splitting of training and validation data is to make sure that our validation data is not “leaking” into our training data. If, for example, our samples that are in the validation data can somehow be correlated into samples that are also in the training data in a way that will never happen in production, then that might constitute a “leakage”. What constitutes this leakage is of course very dependent on model’s task and the data we use to train it.</p>
+
+<h3 id="using-the-metrics-to-improve-the-model">
+<a class="anchor" href="#using-the-metrics-to-improve-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the metrics to improve the model</h3>
+
+<p>If we do the training-validation split correctly, then our validation metrics should be a good predictor
+of the model’s performance when it is deployed in production. As such, we can use the metrics to guide us on tweaking the model until its metrics are good enough or even tell us to stop if the metrics start to worsen. 
+We can also use it to compare different models and allow us to pick the one with the best performance.</p>
+
+<p>As we learn different techniques and learn different “hyperparameters” to tweak the model, at some point, that although the model does not use or “see” the validation data during its training, we, as the practitioners guiding the process of selecting hyperparameters towards a set of the model’s parameters that result in a good performance metric on the validation data, we might have actually started “overfitting” the model to match the validation data, at the expense of worsening its performance on data it will encounter once we deploy it in the real world. Though less of a possibility, it is still a possibility.</p>
+
+<h3 id="test-datasets">
+<a class="anchor" href="#test-datasets" aria-hidden="true"><span class="octicon octicon-link"></span></a>Test Datasets</h3>
+
+<p>In order to counter this “leakage” of the validation data into the model, one possible solution is to set aside a third set of data known as the test data. This is again split from the labelled data and the usual caveats apply, i.e. it must be representative of the data the model will encounter in the real world and must not be correlated with samples present in the training and validation data. This test data will not be used in the training process and when we are updating the hyperparameters and validating the performance metrics using the validation dataset. It will only be used to predict the performance of the model once all the tweaking has been done.</p>
+
+<h3 id="tracking-the-performance-of-the-model-during-training">
+<a class="anchor" href="#tracking-the-performance-of-the-model-during-training" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tracking the performance of the model during training</h3>
+
+<p>As we go through each epoch (each epoch is a complete pass through all your training data), and since we are using batch gradient descent where for each epoch we have subdivided your training data into batches, we will be executing the training loop for each batch and updating the model’s parameters each time we pass through the training loop.</p>
+
+<p>In order to give us an idea of the current performance of the model, at the end of the training loop for all batches, we can then compute the metrics and loss on the validation dataset, doing the inferencing (making sure we do this without updating the computational graph since only the forward propagation steps on the training data should be updating the computational graph since its the gradients on the training input data that should be used to update parameters).</p>
+
+<p>The computation of the validation loss and metrics are also done in batches using the GPU because they run quicker if they are parallelized, but usually the batch sizes are double the batch sizes for the training phase because they dont use the computational graph to track the calculations on the inference and loss calculations. At the end of all the validation batches, the means of the validation loss and metrics are displayed along with the training loss to give an indication of the model’s performance.</p>
+
+<h3 id="parameter-initialization-and-transfer-learning">
+<a class="anchor" href="#parameter-initialization-and-transfer-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameter Initialization and Transfer Learning</h3>
+
+<p>In the section on <a href="#model-training">training the model</a>, especially for the cat-dog image recognition example, we did some hand waving on how we actually get a starting point for the model.</p>
+
+<p>Remember, we can usually define an architecture (which is how the many neurons there are in each layer, how many layers and how each layer connects to the other layers), but we haven’t discussed how we come up with the initial values for the parameters themselves.</p>
+
+<p>If we didn’t have any other starting point, the way practitioners usually set the initial parameters are by setting them to random values.</p>
+
+<p>Of course, there are also particularities in the way we setup these random parameters but the idea is that whatever random values they start with, during the training phase, these parameters converge to a set of values that will provide the optimum level of performance needed to perform a task.</p>
+
+<p>As an alternative to starting out with random values, we could also use a model trained on a similar task but not necessarily the same as the task we want the model to optimize. This idea of using an pre-existing pre-trained model and adapting it to your particular task is known as <strong>transfer learning</strong>.</p>
+
+<p>Transfer learning, if done with the appropriate pre-existing pre-trained model, can reduce the amount of data and computation needed to reach an optimum level of performance.</p>
+
+<p>This is the primary reason why, by using transfer learning, we can reach state of the art performance even on limited computing requirements and limited amounts of labelled data.</p>
+
+<p>For computer vision tasks, these pre-trained image recognition models usually come in a set of well defined architectures that have been known to perform well in some competititon and have usually been trained on large image datasets.</p>
+
+<p><sub>Copyright © 2020 by Butch Landingin. All rights reserved. version 0.1.11</sub></p>
+<hr>
+<h2 id="footnotes">
+<a class="anchor" href="#footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://www.calnewport.com/blog/2015/11/25/the-feynman-notebook-method/">Feynman Method</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div><a class="u-url" href="/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/butchland-machine-learning-notes/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/butchland-machine-learning-notes/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My explorations in machine learning</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
