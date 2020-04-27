@@ -42,6 +42,7 @@ minima:
     twitter: butchland
     github: butchland
 
+
 # Set this to true to get LaTeX math equation support
 use_math:
 
@@ -75,7 +76,7 @@ default_badges:
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
 theme: minima
-# theme: jekyll-theme-slate
+
 plugins:
   - jekyll-feed
   - jekyll-gist
