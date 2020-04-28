@@ -51,7 +51,29 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
+    {%- if page.toc -%}
+    <div class="show_toc_section"><button id="show_toc">Show TOC</button></div>
+    {%- endif -%}
     {{ content | toc  }}
+    {%- if page.toc -%}
+    <script >
+      var toc_button = document.getElementById('show_toc');
+      var toc_nav = document.getElementsByClassName('section-nav')[0];
+      toc_nav.style.display = 'none'; // hide on initial display
+      var toggle_toc = function(e){
+        if (toc_button.innerText === 'Hide TOC') {
+          toc_button.innerHTML = 'Show TOC';
+          toc_nav.style.display = 'none';
+        } else {
+          toc_button.innerHTML = 'Hide TOC';
+          toc_nav.style.display = 'block';
+        }
+        // e.target.preventDefault();
+        return false;
+      }; 
+      toc_button.addEventListener('click', toggle_toc);    
+    </script>
+    {%- endif -%}
   </div>
   {%- if page.comments -%}
     {%- include utterances.html -%}
