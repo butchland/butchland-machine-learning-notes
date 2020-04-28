@@ -484,7 +484,7 @@ body { background-color: custom-background-color; }
 
 .page-content { background-color: #111114; }
 
-.page-content .wrapper { width: 100%; background-color: #f2f0ec; }
+.page-content .wrapper { padding-top: 5px; width: 100%; background-color: #f2f0ec; }
 
 .site-footer { background-color: #111114; display: block; border-top: 1px solid #111114; }
 
