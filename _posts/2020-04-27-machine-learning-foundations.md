@@ -1,5 +1,5 @@
 ---
-toc: false
+toc: true
 layout: post
 description: My rambling notes on machine learning
 categories: [machine learning]
