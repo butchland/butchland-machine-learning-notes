@@ -1,10 +1,12 @@
 ---
-toc: true
+toc: false
 layout: post
 description: My rambling notes on machine learning
 categories: [machine learning]
 title: Machine Learning Foundations
+image: images/j586af7nxvu41.jpg
 ---
+![train models]({{ "images/j586af7nxvu41.jpg" | relative_url }} "credit to https://i.redd.it/j586af7nxvu41.jpg" )
 # Introduction to Machine Learning, Deep Learning and Neural Networks
 
 _These notes are my attempt to implement Feynman's method of
