@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" rel="self" type="application/atom+xml" /><link href="https://butchland.github.io/butchland-machine-learning-notes/" rel="alternate" type="text/html" /><updated>2020-05-27T04:12:02-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/feed.xml</id><title type="html">Butch Landingin’s Machine Learning Notes</title><subtitle>My explorations in machine learning</subtitle><entry><title type="html">Machine Learning Foundations</title><link href="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations.html" rel="alternate" type="text/html" title="Machine Learning Foundations" /><published>2020-04-27T00:00:00-05:00</published><updated>2020-04-27T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations.html">&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/images/j586af7nxvu41.jpg&quot; alt=&quot;train models&quot; title=&quot;credit to https://i.redd.it/j586af7nxvu41.jpg&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" rel="self" type="application/atom+xml" /><link href="https://butchland.github.io/butchland-machine-learning-notes/" rel="alternate" type="text/html" /><updated>2020-05-30T11:41:22-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/feed.xml</id><title type="html">Butch Landingin’s Machine Learning Notes</title><subtitle>My explorations in machine learning</subtitle><entry><title type="html">Accountabilities</title><link href="https://butchland.github.io/butchland-machine-learning-notes/life%20hacks/2020/05/30/accountabilities.html" rel="alternate" type="text/html" title="Accountabilities" /><published>2020-05-30T00:00:00-05:00</published><updated>2020-05-30T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/life%20hacks/2020/05/30/accountabilities</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/life%20hacks/2020/05/30/accountabilities.html">&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/compiling.png&quot; alt=&quot;slacking off&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;accountabilities&quot;&gt;Accountabilities&lt;/h1&gt;
+
+&lt;p&gt;One of the problems with online learning in general is that it can be a pretty lonely pursuit. After a while, if there is no one to push you, motivation can flag and your progress slows down.&lt;/p&gt;
+
+&lt;p&gt;In a bid to prevent this, I have been active in a study group so that I have continuing activities even as we await the second part of the 2020 edition of the fastai course.&lt;/p&gt;
+
+&lt;p&gt;Some of the activities we have is a biweekly meeting focused on presentation of projects, blog posts, etc. as well as a weekly meeting focused on reviewing the lectures and the book chapters. A third activity is a weekly meeting with a smaller group (in my case, just me, Ope and Maryam) to become accountability buddies.&lt;/p&gt;
+
+&lt;p&gt;As part of making my accountabilities stick, I am publishing it publicly (just not searchable) so I can share my plan with my friends or study group mates and make myself accountable to them.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-goals&quot;&gt;My Goals&lt;/h2&gt;
+
+&lt;p&gt;My goal is to acquire both the theoretical foundations of Machine and Deep Learning as well the practical skills to apply deep learning to particular fields such as computer vision, natural language processing and tabular data, as these are probably the most accessible applications for me right now.&lt;/p&gt;
+
+&lt;p&gt;In addition, I also want to learn to develop and deploy ML applications on cloud platforms such as GCP, AWS and Azure.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-accountabilities&quot;&gt;My Accountabilities&lt;/h2&gt;
+
+&lt;p&gt;My focus right now (as of June, 2020) is to deepen my understanding of deep learning. 
+I plan to focus on the fastai materials for now. My goal is to build a set of lecture notes combining the video lectures and the book chapters.&lt;/p&gt;
+
+&lt;p&gt;In addition to gaining a theoretical understanding of the topics, I also plan on developing my skills in building and training models. My goal is to build around five mini-projects with either pre-existing datasets or datasets that I build.&lt;/p&gt;
+
+&lt;p&gt;I also plan on joining a kaggle competition in about a couple of weeks time (once I have started on the lecture notes and mini-projects).&lt;/p&gt;
+
+&lt;h2 id=&quot;smart-goals-&quot;&gt;SMART Goals &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Lecture Notes&lt;/strong&gt; - review video, read book, answer chapter questionnaire, review other peoples answers, run notebooks, rebuild notebooks from scratch, explore notebook variants, and finally write and publish lecture notes (the deadline of each lecture note is before the start of study group reading meeting for the next lecture). See &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1TOrSfRrLD9i1He8gac9CQ2vXGzF-bnZMimyvhNc6bsg/edit#gid=0&quot;&gt;tracker&lt;/a&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Lecture 1 (app_jupyter and ch1 intro) and Lecture 2 (ch2 production) - June 2, 2020&lt;/li&gt;
+      &lt;li&gt;Lecture 3 (ch 2 production and ch4 mnist basics ) and Lecture 4 (ch4 mnist basics and ch5 pet breeds) - June 9, 2020&lt;/li&gt;
+      &lt;li&gt;Lecture 5 (ch 3 ethics) and Lecture 6 (ch5 pet breeds and ch6 multicat) - June 16, 2020&lt;/li&gt;
+      &lt;li&gt;Lecture 7 (ch 8 collab and ch 9 tabular) - June 23, 2020&lt;/li&gt;
+      &lt;li&gt;Lecture 8 (ch 10 nlp and ch 12 nlp dive) - June 30, 2020&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mini projects&lt;/strong&gt; &lt;em&gt;(todo)&lt;/em&gt; - should cover computer vision, nlp, tabular, collab filter&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Baybayin (filipino script) handwriting recognition system&lt;/li&gt;
+      &lt;li&gt;Selfie/Faces - gender recognition system ?&lt;/li&gt;
+      &lt;li&gt;Twitter sentiment140 analysis (NLP) ?&lt;/li&gt;
+      &lt;li&gt;Image Recognition (face) celebrity ?&lt;/li&gt;
+      &lt;li&gt;fingers recognition&lt;/li&gt;
+      &lt;li&gt;SVHN house numbers recognition&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Long term project&lt;/strong&gt; &lt;em&gt;(todo)&lt;/em&gt; - build up ML Portfolio&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Kaggle competition ?&lt;/li&gt;
+      &lt;li&gt;Detecting OOB (out of bounds) data&lt;/li&gt;
+      &lt;li&gt;Filipino caption translation of fastai videos ?&lt;/li&gt;
+      &lt;li&gt;Deep Learning Adventure Guide ?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Fun projects&lt;/strong&gt; &lt;em&gt;(todo)&lt;/em&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;DDG Image Downloader enhancements to use full size orig images&lt;/li&gt;
+      &lt;li&gt;Update my pet-breed-classifier-demo to use fastai2&lt;/li&gt;
+      &lt;li&gt;React Native mobile app with image recognition (template)&lt;/li&gt;
+      &lt;li&gt;React/Vuejs Webapp with image recognition (template) ?&lt;/li&gt;
+      &lt;li&gt;Godot game with image recognition or NLP (template) ?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/SMART_criteria&quot;&gt;SMART Goals - Specific, Measurable, Achievable, Relevant, Timebound&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Accountabilities</summary></entry><entry><title type="html">Machine Learning Foundations</title><link href="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations.html" rel="alternate" type="text/html" title="Machine Learning Foundations" /><published>2020-04-27T00:00:00-05:00</published><updated>2020-04-27T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/04/27/machine-learning-foundations.html">&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/images/j586af7nxvu41.jpg&quot; alt=&quot;train models&quot; title=&quot;credit to https://i.redd.it/j586af7nxvu41.jpg&quot; /&gt;&lt;/p&gt;
 &lt;h1 id=&quot;introduction-to-machine-learning-deep-learning-and-neural-networks&quot;&gt;Introduction to Machine Learning, Deep Learning and Neural Networks&lt;/h1&gt;
 
 &lt;p&gt;&lt;em&gt;These notes are my attempt to implement Feynman’s method of
