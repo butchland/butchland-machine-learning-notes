@@ -45,6 +45,9 @@ I also plan on joining a kaggle competition in about a couple of weeks time (onc
 2. **Mini projects** _(todo)_ - should cover computer vision, nlp, tabular, collab filter
 
 	* Baybayin (filipino script) handwriting recognition system
+		* [initial data download and exploration (eda)](https://github.com/butchland/fastai_nb_explorations/blob/master/baybayin_handwritten_character_dataset_initial_eda.ipynb)
+		* [initial model build)](https://github.com/butchland/fastai_nb_explorations/blob/master/baybayin_handwritten_character_dataset_initial_model_build.ipynb)
+		* _TODO_: build canvas image writer web app with baybayin recognition (with pytorch js) ?
 	* Selfie/Faces - gender recognition system ?
 	* Twitter sentiment140 analysis (NLP) ?
 	* Image Recognition (face) celebrity ?
