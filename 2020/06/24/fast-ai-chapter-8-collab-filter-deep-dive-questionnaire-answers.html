@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Collaborative Filtering Deep Dive | Butch Landingin’s Machine Learning Notes</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Collaborative Filtering Deep Dive" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My explorations in machine learning" />
+<meta property="og:description" content="My explorations in machine learning" />
+<link rel="canonical" href="https://butchland.github.io/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" />
+<meta property="og:url" content="https://butchland.github.io/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" />
+<meta property="og:site_name" content="Butch Landingin’s Machine Learning Notes" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-24T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"My explorations in machine learning","@type":"BlogPosting","headline":"Collaborative Filtering Deep Dive","dateModified":"2020-06-24T00:00:00-05:00","datePublished":"2020-06-24T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://butchland.github.io/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html"},"url":"https://butchland.github.io/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/butchland-machine-learning-notes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" /><link rel="shortcut icon" type="image/x-icon" href="/butchland-machine-learning-notes/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/about/">About</a><a class="page-link" href="/butchland-machine-learning-notes/search/">Search</a><a class="page-link" href="/butchland-machine-learning-notes/categories/">Tags</a></div>
+      </nav><a class="site-title" rel="author" href="/butchland-machine-learning-notes/">Butch Landingin&#39;s Machine Learning Notes</a>
+
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Collaborative Filtering Deep Dive</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-24T00:00:00-05:00" itemprop="datePublished">
+        Jun 24, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/butchland/butchland-machine-learning-notes/tree/master/_notebooks/2020-06-24-fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/butchland-machine-learning-notes/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/butchland/butchland-machine-learning-notes/master?filepath=_notebooks%2F2020-06-24-fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/butchland-machine-learning-notes/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/butchland/butchland-machine-learning-notes/blob/master/_notebooks/2020-06-24-fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/butchland-machine-learning-notes/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-06-24-fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Questionnaire">Questionnaire<a class="anchor-link" href="#Questionnaire"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><p>What problem does collaborative filtering solve?</p>
+</li>
+<li><p>How does it solve it?</p>
+</li>
+<li>Why might a collaborative filtering predictive model fail to be a very useful recommendation system?</li>
+<li>What does a crosstab representation of collaborative filtering data look like?</li>
+<li>Write the code to create a crosstab representation of the MovieLens data (you might need to do some web searching!).</li>
+<li>What is a latent factor? Why is it "latent"?</li>
+<li>What is a dot product? Calculate a dot product manually using pure Python with lists.</li>
+<li>What does <code>pandas.DataFrame.merge</code> do?</li>
+<li>What is an embedding matrix?</li>
+<li>What is the relationship between an embedding and a matrix of one-hot-encoded vectors?</li>
+<li>Why do we need <code>Embedding</code> if we could use one-hot-encoded vectors for the same thing?</li>
+<li>What does an embedding contain before we start training (assuming we're not using a pretained model)?</li>
+<li>Create a class (without peeking, if possible!) and use it.</li>
+<li>What does <code>x[:,0]</code> return?</li>
+<li>Rewrite the <code>DotProduct</code> class (without peeking, if possible!) and train a model with it.</li>
+<li>What is a good loss function to use for MovieLens? Why? </li>
+<li>What would happen if we used cross-entropy loss with MovieLens? How would we need to change the model?</li>
+<li>What is the use of bias in a dot product model?</li>
+<li>What is another name for weight decay?</li>
+<li>Write the equation for weight decay (without peeking!).</li>
+<li>Write the equation for the gradient of weight decay. Why does it help reduce weights?</li>
+<li>Why does reducing weights lead to better generalization?</li>
+<li>What does <code>argsort</code> do in PyTorch?</li>
+<li>Does sorting the movie biases give the same result as averaging overall movie ratings by movie? Why/why not?</li>
+<li>How do you print the names and details of the layers in a model?</li>
+<li>What is the "bootstrapping problem" in collaborative filtering?</li>
+<li>How could you deal with the bootstrapping problem for new users? For new movies?</li>
+<li>How can feedback loops impact collaborative filtering systems?</li>
+<li>When using a neural network in collaborative filtering, why can we have different numbers of factors for movies and users?</li>
+<li>Why is there an <code>nn.Sequential</code> in the <code>CollabNN</code> model?</li>
+<li>What kind of model should we use if we want to add metadata about users and items, or information such as date and time, to a collaborative filtering model?</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Further-Research">Further Research<a class="anchor-link" href="#Further-Research"> </a></h3><ol>
+<li>Take a look at all the differences between the <code>Embedding</code> version of <code>DotProductBias</code> and the <code>create_params</code> version, and try to understand why each of those changes is required. If you're not sure, try reverting each change to see what happens. (NB: even the type of brackets used in <code>forward</code> has changed!)</li>
+<li>Find three other areas where collaborative filtering is being used, and find out what the pros and cons of this approach are in those areas.</li>
+<li>Complete this notebook using the full MovieLens dataset, and compare your results to online benchmarks. See if you can improve your accuracy. Look on the book's website and the fast.ai forum for ideas. Note that there are more columns in the full dataset—see if you can use those too (the next chapter might give you ideas).</li>
+<li>Create a model for MovieLens that works with cross-entropy loss, and compare it to the model in this chapter.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+
+</div><a class="u-url" href="/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/butchland-machine-learning-notes/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/butchland-machine-learning-notes/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My explorations in machine learning</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

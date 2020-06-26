@@ -490,6 +490,6 @@ body { background-color: custom-background-color; }
 
 .site-footer a, .site-footer a:hover, .site-footer a:visited { color: #337ab7; }
 
-img[alt=headpic] { width: 200px; }
+img[alt="headpic"] { width: 200px; }
 
 /*# sourceMappingURL=style.css.map */

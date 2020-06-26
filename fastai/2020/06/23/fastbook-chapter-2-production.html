@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Fastbook Chapter 2 Production | Butch Landingin’s Machine Learning Notes</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Fastbook Chapter 2 Production" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Fastbook Chapter 2 Book Notes" />
+<meta property="og:description" content="Fastbook Chapter 2 Book Notes" />
+<link rel="canonical" href="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/23/fastbook-chapter-2-production.html" />
+<meta property="og:url" content="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/23/fastbook-chapter-2-production.html" />
+<meta property="og:site_name" content="Butch Landingin’s Machine Learning Notes" />
+<meta property="og:image" content="https://butchland.github.io/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-00-49-fastbook.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-23T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Fastbook Chapter 2 Book Notes","@type":"BlogPosting","headline":"Fastbook Chapter 2 Production","dateModified":"2020-06-23T00:00:00-05:00","datePublished":"2020-06-23T00:00:00-05:00","image":"https://butchland.github.io/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-00-49-fastbook.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/23/fastbook-chapter-2-production.html"},"url":"https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/23/fastbook-chapter-2-production.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/butchland-machine-learning-notes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" /><link rel="shortcut icon" type="image/x-icon" href="/butchland-machine-learning-notes/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/about/">About</a><a class="page-link" href="/butchland-machine-learning-notes/search/">Search</a><a class="page-link" href="/butchland-machine-learning-notes/categories/">Tags</a></div>
+      </nav><a class="site-title" rel="author" href="/butchland-machine-learning-notes/">Butch Landingin&#39;s Machine Learning Notes</a>
+
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Fastbook Chapter 2 Production</h1><p class="page-description">Fastbook Chapter 2 Book Notes</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-23T00:00:00-05:00" itemprop="datePublished">
+        Jun 23, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      11 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/butchland-machine-learning-notes/categories/#fastai">fastai</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><div class="show_toc_section"><button id="show_toc">Show TOC</button></div><ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#from-model-to-production">From Model to Production</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#the-practice-of-deep-learning">The Practice of Deep Learning</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#starting-your-project">Starting your project</a></li>
+<li class="toc-entry toc-h3"><a href="#the-state-of-deep-learning">The State of Deep Learning</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#computer-vision">Computer Vision</a></li>
+<li class="toc-entry toc-h4"><a href="#text-nlp">Text (NLP)</a></li>
+<li class="toc-entry toc-h4"><a href="#combining-text-and-images">Combining Text and Images</a></li>
+<li class="toc-entry toc-h4"><a href="#tabular-data">Tabular Data</a></li>
+<li class="toc-entry toc-h4"><a href="#recommendation-systems">Recommendation Systems</a></li>
+<li class="toc-entry toc-h4"><a href="#other-data-types">Other Data Types</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#the-drivetrain-approach">The Drivetrain Approach</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#gathering-data">Gathering Data</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#sidebar-getting-help-from-jupyter">Sidebar: Getting Help from Jupyter</a></li>
+<li class="toc-entry toc-h4"><a href="#bing-image-search-results">Bing Image Search Results</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#from-data-to-dataloaders">From Data to DataLoaders</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#data-augmentation">Data Augmentation</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#training-your-model-to-clean-your-data">Training your Model to Clean your Data</a></li>
+<li class="toc-entry toc-h2"><a href="#turning-your-model-into-an-online-application">Turning your Model into an Online Application</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#using-the-model-for-inference">Using the Model for Inference</a></li>
+<li class="toc-entry toc-h3"><a href="#creating-a-notebook-app-from-the-model">Creating a Notebook App from the Model</a></li>
+<li class="toc-entry toc-h3"><a href="#turning-your-notebook-into-a-real-app">Turning Your Notebook into a Real App</a></li>
+<li class="toc-entry toc-h3"><a href="#deploying-your-app">Deploying your app</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#how-to-avoid-disaster">How to Avoid Disaster</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#unforeseen-consequences-and-feedback-loops">Unforeseen Consequences and Feedback Loops</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#get-writing">Get Writing</a></li>
+</ul>
+</li>
+</ul><p><em>These are my notes from my reading of the fastai book</em>
+<em>by Jeremy Howard and Sylvain Gugger</em></p>
+
+<h1 id="from-model-to-production">
+<a class="anchor" href="#from-model-to-production" aria-hidden="true"><span class="octicon octicon-link"></span></a>From Model to Production</h1>
+
+<ul>
+  <li>
+<strong>Chapter Objective</strong>: Learn the end-to-end process of building DL application
+    <ul>
+      <li>collect data</li>
+      <li>build model</li>
+      <li>deploy app</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="the-practice-of-deep-learning">
+<a class="anchor" href="#the-practice-of-deep-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Practice of Deep Learning</h2>
+
+<ul>
+  <li>DL can solve a lot of challenging problems that were previously hard to solve.
+    <ul>
+      <li>As a DL beginner - find sweet spot of problems
+        <ul>
+          <li>similar to example problems</li>
+          <li>get extremely useful results</li>
+        </ul>
+      </li>
+      <li>but DL is not magic!
+        <ul>
+          <li>same lines of code wont work for all problems</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>To learn DL quickly
+    <ul>
+      <li>find sweet spot of challenging problems
+        <ul>
+          <li>quick to get extremely useful results</li>
+          <li>but difficult enough to always learn something new</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Understanding capabilities and constraints of DL
+    <ul>
+      <li>underestimating constraints and overestimating capabilities of DL
+        <ul>
+          <li>can lead to poor results, consequently frustration</li>
+        </ul>
+      </li>
+      <li>overestimating constraints and underestimating capabilities
+        <ul>
+          <li>can lead to reticence in applying DL, even when it can be reachable</li>
+        </ul>
+      </li>
+      <li>
+<strong>Summary</strong>:
+        <ul>
+          <li>underestimating capabilities can lead to reticence in applying DL</li>
+          <li>underestimating constraints can lead to failure to consider and react to issues arising from using DL</li>
+          <li>best to keep an open mind
+            <ul>
+              <li>DL might solve part of your problem with less data or complexity</li>
+              <li>Design a process to find specific capabilities and constraints related to your particular area</li>
+              <li>No risky bets - gradually roll out models so they don’t create significant risks
+                <ul>
+                  <li>backtest prior to production</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="starting-your-project">
+<a class="anchor" href="#starting-your-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Starting your project</h3>
+
+<ul>
+  <li>Ensure that you have a project to work on
+    <ul>
+      <li>only by working through projects will gain experience building and using models</li>
+    </ul>
+  </li>
+  <li>Considerations in looking for your project
+    <ul>
+      <li>most important consideration: data availability</li>
+      <li>get started quickly</li>
+      <li>iterate quickly - goal is not to start with “perfect” dataset, but start and iterate quickly</li>
+      <li>iterate end-to-end
+        <ul>
+          <li>dont spend too much time polishing each step</li>
+          <li>complete every step in reasonable time</li>
+          <li>do it all the way to the end and then come back to iterate again and again</li>
+          <li>evaluate process to find areas to focus on that make the biggest gains in end result</li>
+        </ul>
+      </li>
+      <li>work through the book
+        <ul>
+          <li>complete lots of small experiments
+            <ul>
+              <li>by running and adjusting the provided notebooks</li>
+              <li>at the same time, gradually develop your own projects</li>
+            </ul>
+          </li>
+          <li>get experience with all tools and techniques discussed in the book
+            <ul>
+              <li>learn by practicing and failing</li>
+              <li>DL is still artisanal practice
+                <ul>
+                  <li>nothing beats applied practical experience in training models</li>
+                  <li>backed by theoretical understanding of DL principles</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>show effective results
+            <ul>
+              <li>nothing beats a working prototype</li>
+              <li>get organization buy-in for DL projects</li>
+            </ul>
+          </li>
+          <li>Easiest to get started on projects
+            <ul>
+              <li>where data is already available (e.g. public datasets)</li>
+              <li>related to something you are already doing (where you already have access to data)</li>
+              <li>be creative if data is not available
+                <ul>
+                  <li>find related data in a similar domain or tackling a slightly different problem</li>
+                  <li>working on related domain will still help you identify shortcuts or workarounds</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>When starting DL, Not a good idea to branch out to different areas
+            <ul>
+              <li>esp. areas where DL has not been applied before</li>
+              <li>if you have problem - you wont know whether
+                <ul>
+                  <li>you simply made a mistake or</li>
+                  <li>DL is not a good fit for the application</li>
+                  <li>hard to look for help</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Start with a problem that someone else had good results
+            <ul>
+              <li>similar to what you are trying to achieve</li>
+              <li>or you can convert data to some similar format</li>
+              <li>look at areas where DL has been successful</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-state-of-deep-learning">
+<a class="anchor" href="#the-state-of-deep-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>The State of Deep Learning</h3>
+
+<ul>
+  <li>Consider whether DL is a good fit to your application by looking where DL capabilities are mature.
+    <ul>
+      <li>but DL is evolving quickly, so previous historical constraints may have been overcome by latest research</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="computer-vision">
+<a class="anchor" href="#computer-vision" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer Vision</h4>
+
+<ul>
+  <li>Areas where DL is mature:
+    <ul>
+      <li>object recognition - what items are in an image (e.g.  everyday objects, faces, medical images - xrays, MRI, - cancerous lesions, etc)</li>
+      <li>object detection - where the objects are in an image
+        <ul>
+          <li>variant: segmentation - what object each pixel belongs to</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>DL image recognition may not be good
+    <ul>
+      <li>recognizing images that are significantly different from ones used in training
+        <ul>
+          <li>eg. if no black/white images in training data, model might not be good when used on b/w images.</li>
+          <li>also not good for hand-drawn images if they are not part of training data.</li>
+        </ul>
+      </li>
+      <li>no general way to check for missing types of images in training data
+        <ul>
+          <li>but there are ways to check if unexpected image types are encountered in production
+            <ul>
+              <li>AKA checking for <em>out-of-domain data</em>
+</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Labeling image data can be slow and expensive
+        <ul>
+          <li>currently requires manual effort</li>
+          <li>lot of effort to make this better
+            <ul>
+              <li>tools to make labelling faster and easier</li>
+              <li>require handcrafted labels to train accurate object detection models
+                <ul>
+                  <li>one useful technique: <em>data augmentation</em>
+                    <ul>
+                      <li>synthetically generate variations of input data to improve capability of model</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Another possibility is to convert your data (which may not appear to be a computer vision problem) into images
+        <ul>
+          <li>images may then be amenable to computer vision algorithms for detection</li>
+          <li>example: convert audio to images of acoustic waveforms and use object detection to solve audio detection problem</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="text-nlp">
+<a class="anchor" href="#text-nlp" aria-hidden="true"><span class="octicon octicon-link"></span></a>Text (NLP)</h4>
+
+<ul>
+  <li>DL in NLP is good at:
+    <ul>
+      <li>classifying short/long docs on
+        <ul>
+          <li>spam/not spam,</li>
+          <li>sentiment (positive/negative review)</li>
+          <li>author, source website, etc.</li>
+        </ul>
+      </li>
+      <li>generating context-appropriate text
+        <ul>
+          <li>but currently not good at generating <em>correct</em> responses</li>
+          <li>can be dangerous, as text can be used for mass disinformation</li>
+        </ul>
+      </li>
+      <li>Other NLP applications
+        <ul>
+          <li>translate one language to another</li>
+          <li>summarize long documents</li>
+          <li>find mentions of a concept</li>
+          <li>but translations and summaries can contain incorrect information</li>
+          <li>actual usage: google translate and other online translation services - use DL</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="combining-text-and-images">
+<a class="anchor" href="#combining-text-and-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Combining Text and Images</h4>
+
+<ul>
+  <li>Combine text and images into single model
+    <ul>
+      <li>example DL app: generate captions for images
+        <ul>
+          <li>but no guarantee for accuracy</li>
+        </ul>
+      </li>
+      <li>need to have human oversight due to possible errors
+        <ul>
+          <li>can be more productive/accurate than manual process with humans alone</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="tabular-data">
+<a class="anchor" href="#tabular-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tabular Data</h4>
+
+<ul>
+  <li>Analyzing time-series and tabular data, DL has made great strides</li>
+  <li>DL is generally used as part of ensemble of multiple types of models</li>
+  <li>DL is not a great improvement over RF (random forest) or GBM (gradient boosting methods)</li>
+  <li>but can handle columns with greater cardinality or columns with text (by using NLP)</li>
+  <li>Downside: DL takes longer to train than RF or GBM</li>
+</ul>
+
+<h4 id="recommendation-systems">
+<a class="anchor" href="#recommendation-systems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recommendation Systems</h4>
+
+<ul>
+  <li>very similar to tabular data, except they usually have a high-cardinality categorical variables represent users and products (or something similar - eg. movie review)</li>
+  <li>represents data as a sparse matrix (customers as rows and products as rows) representing purchases by a customer of a product</li>
+  <li>Apply collaborative filtering to fill in the matrix - this is used to make recommendations</li>
+  <li>Can combine other types of data -eg images, text, additional metadata such as customer information, previous transactions etc.</li>
+  <li>Can only predict, but not recommend - need to analyze how to turn predictions into recommendations</li>
+</ul>
+
+<h4 id="other-data-types">
+<a class="anchor" href="#other-data-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Data Types</h4>
+
+<p>Other data types also exist</p>
+
+<ul>
+  <li>Protein chains and genome sequences - can use NLP techniques</li>
+  <li>Audio recordings - convert to image as spectograms - can use CV techniques</li>
+</ul>
+
+<h3 id="the-drivetrain-approach">
+<a class="anchor" href="#the-drivetrain-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Drivetrain Approach</h3>
+
+<ul>
+  <li>Ensuring effective application of DL
+    <ul>
+      <li>DL can create accurate models but not useful</li>
+      <li>DL can also create inaccurate models that are useful</li>
+      <li>need to consider how your work will be used</li>
+    </ul>
+  </li>
+  <li>Drivetrain Approach - created by Jeremy, Margit Zwemer and Mike Loukides
+    <ul>
+      <li>discussed in book <a href="https://www.oreilly.com/radar/drivetrain-approach-data-products/">Designing Great Data Products</a>
+</li>
+      <li>basic idea:
+        <ul>
+          <li>start considering objective</li>
+          <li>think about actions to take to meet objective</li>
+          <li>what data you have or can get to help decide on the action</li>
+          <li>build a model that can be used to determine best actions to get best results for your objective</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_2_Production_files/FastAI2020/Lesson_2_Production/Fastbook_Chapter_2_Production/drivetrain-approach.png" alt=""></p>
+
+<ul>
+  <li>Models are usually part of solution, they become part of the plumbing</li>
+  <li>Use data to produce actionable outcomes</li>
+  <li>Example: Google Search
+    <ul>
+      <li>define clear objective: what is user main objective in search? - find most relevant search result</li>
+      <li>consider levers for this objective: ranking of search results</li>
+      <li>consider data needed to produce ranking: implicit info based on links between pages provides rich data to determine which page is most relevant</li>
+      <li>after the first 3 steps, and determining what data is available and what data is needed, then build model to meet objective</li>
+    </ul>
+  </li>
+  <li>Example: Recommendation Systems
+    <ul>
+      <li>objective: drive additional sales by recommending items which customers would never have purchased without the recommendation</li>
+      <li>lever: ranking of the recommendation</li>
+      <li>data needed: new data to generate recommendations to trigger new sales
+        <ul>
+          <li>require randomized experiments to collect data about wide range of recommendations for a wide range of customers (required to have info usable to optimize recommendations to increase sales)</li>
+        </ul>
+      </li>
+      <li>build two models - purchase probabilities conditional on seeing or not seeing the recommendation
+        <ul>
+          <li>the difference between the two models is a utility function for a given recommendation
+            <ul>
+              <li>low if algo recommends a familiar book already rejected by the customer</li>
+              <li>low if algo recommends a book  they would buy even without the recommendation</li>
+              <li>high if algo recommends a book they would not have bought without the recommendation</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>in practice, implementation of model requires more than just training the model.
+        <ul>
+          <li>also need to run experiments to collect more data</li>
+          <li>also need to consider how to incorporate models into the overall system</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="gathering-data">
+<a class="anchor" href="#gathering-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gathering Data</h2>
+
+<ul>
+  <li>How to find data for your project
+    <ul>
+      <li>For some projects, data needed might be online</li>
+    </ul>
+  </li>
+  <li>Bear detector project
+    <ul>
+      <li>first project to build end-to-end model to app</li>
+      <li>distinguish between black, grizzly and teddy bear images</li>
+      <li>internet database of bear images is available</li>
+      <li>need to find and download bear images</li>
+    </ul>
+  </li>
+  <li>Current Example: Bing Search Images
+    <ul>
+      <li>Signup at Microsoft - comes with <a href="https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/">Bing Image Search</a>
+</li>
+      <li>see <a href="https://github.com/fastai/course-v4/blob/master/nbs/02_production.ipynb">course notebook</a>
+</li>
+      <li>see <a href="https://github.com/fastai/fastbook/blob/master/02_production.ipynb">book chapter</a>
+</li>
+      <li>API Key Page - after login - get API key <a href="https://azure.microsoft.com/en-us/try/cognitive-services/my-apis/?api=search-api-v7">here</a>
+</li>
+      <li>key = ‘xxx’</li>
+      <li>search and get image urls</li>
+    </ul>
+
+    <p>results = search_images_bing(key, ‘grizzly bear’)
+  ims = results.attrgot(‘content_url’)
+  len(ims)
+  dest = ‘images/grizzly.jpg’
+  download_url(ims[0],dest)
+  im = Image.open(dest)
+  im.to_thumb(128,128)</p>
+  </li>
+</ul>
+
+<p><img src="/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_2_Production_files/FastAI2020/Lesson_2_Production/Fastbook_Chapter_2_Production/grizzly.png" alt=""></p>
+
+<ul>
+  <li>use <code class="highlighter-rouge">download_images</code> to download grizzly bears, black bears and teddy bears</li>
+  <li>download images to a different subfolder for each type</li>
+  <li>use <code class="highlighter-rouge">get_image_files</code> to retrieve all images under common bears folder</li>
+  <li>use <code class="highlighter-rouge">verify_images</code> to get corrupted images and <code class="highlighter-rouge">Path.unlink</code> to delete them</li>
+</ul>
+
+<h4 id="sidebar-getting-help-from-jupyter">
+<a class="anchor" href="#sidebar-getting-help-from-jupyter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sidebar: Getting Help from Jupyter</h4>
+
+<ul>
+  <li>use <code class="highlighter-rouge">??&lt;method_name&gt;</code> to show source</li>
+  <li>use <code class="highlighter-rouge">?&lt;method_name&gt;</code> to show doc</li>
+  <li>use <code class="highlighter-rouge">&lt;Tab&gt;</code> to get autocompletion</li>
+  <li>inside parenthesis, use <code class="highlighter-rouge">&lt;Shift-Tab&gt;</code> to get function signature and short doc,
+    <ul>
+      <li>
+<code class="highlighter-rouge">&lt;Shift-Tab&gt;</code> twice to show more doc</li>
+      <li>
+<code class="highlighter-rouge">&lt;Shift-Tab&gt;</code> thrice to open a full window</li>
+    </ul>
+  </li>
+  <li>
+<code class="highlighter-rouge">doc(&lt;func_name&gt;)</code> will open a window and links to source on Github plus <a href="https://dev.fast.ai">full doc</a>
+</li>
+  <li>
+<code class="highlighter-rouge">%debug</code> - open Python debugger which will let you inspect the contents of every variable</li>
+</ul>
+
+<h4 id="bing-image-search-results">
+<a class="anchor" href="#bing-image-search-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bing Image Search Results</h4>
+
+<ul>
+  <li>Since models can only reflect data used to train them, and if the data used to train the models is *biased *then the model will also produce *biased results *
+    <ul>
+      <li>example : Bing Image Search for <a href="https://www.bing.com/images/search?q=healthy+skin&amp;scope=images&amp;form=QBLH&amp;sp=-1&amp;pq=healthy+skin&amp;sc=8-12&amp;qs=n&amp;cvid=349E7D38E6BE4845BE9C361D92FD2375&amp;first=1&amp;scenario=ImageBasicHover">healthy skin</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_2_Production_files/FastAI2020/Lesson_2_Production/Fastbook_Chapter_2_Production/healthy_skin.gif" alt=""></p>
+
+<ul>
+  <li>Be careful about using images without inspecting them - even commercial search images can produce biased results.</li>
+  <li>See “<a href="https://dl.acm.org/doi/10.1145/3306618.3314244">Actionable Auditing: Investigating the Impact of Publicly Naming Biased Performance Results of Commercial AI Products</a>” for more examples</li>
+</ul>
+
+<h2 id="from-data-to-dataloaders">
+<a class="anchor" href="#from-data-to-dataloaders" aria-hidden="true"><span class="octicon octicon-link"></span></a>From Data to DataLoaders</h2>
+
+<p>Now that data has been captured and stored in segregated folders, we need a process to load the image data and feed them to model for training.</p>
+
+<ul>
+  <li>The components responsible for loading the data are the <strong>DataLoaders</strong>
+</li>
+  <li>
+    <p><em>DataLoaders</em> are composed of multiple <em>*DataLoader **objects passed to it - normally the *train</em> dataloader and the <em>valid</em> dataloader</p>
+
+    <p>class DataLoaders(GetAttr):
+      def <strong>init</strong>(self, *loaders): self.loaders = loaders
+      def <strong>getitem</strong>(self, i): return self.loaders[i]
+      train,valid = add_props(lambda i,self: self[i])</p>
+  </li>
+  <li>DataLoader specifications:
+    <ul>
+      <li>What kinds of data we are working with (Image, Category)</li>
+      <li>How to get a list of items</li>
+      <li>How to label these items</li>
+      <li>How to create the validation set</li>
+    </ul>
+  </li>
+  <li>DataLoaders have <em>factory methods</em> for the most common combinations of these components
+    <ul>
+      <li>example: <code class="highlighter-rouge">ImageDataLoaders.from_name_func(</code>
+</li>
+    </ul>
+  </li>
+  <li>
+    <p>MORE FLEXIBLE ALTERNATIVE is the <strong>DataBlock</strong> API</p>
+
+    <p>bears = DataBlock(
+      blocks=(ImageBlock, CategoryBlock), 
+      get_items=get_image_files, 
+      splitter=RandomSplitter(valid_pct=0.2, seed=42),
+      get_y=parent_label,
+      item_tfms=Resize(128))</p>
+  </li>
+  <li>
+<code class="highlighter-rouge">blocks=(ImageBlock, CategoryBlock) -</code> tuple to specify what types for dependent (category - type of bear) and independent(image) variables</li>
+  <li>
+<code class="highlighter-rouge">get_items=get_image_files</code> - underlying items are file paths (to each image)</li>
+  <li>
+<code class="highlighter-rouge">splitter=RandomSplitter(...</code> - randomly split 20 percent of data for validation and the rest for training, with a seed=42 so that the split is repeatable)</li>
+</ul>
+
+<h3 id="data-augmentation">
+<a class="anchor" href="#data-augmentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Augmentation</h3>
+
+<h2 id="training-your-model-to-clean-your-data">
+<a class="anchor" href="#training-your-model-to-clean-your-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training your Model to Clean your Data</h2>
+
+<h2 id="turning-your-model-into-an-online-application">
+<a class="anchor" href="#turning-your-model-into-an-online-application" aria-hidden="true"><span class="octicon octicon-link"></span></a>Turning your Model into an Online Application</h2>
+
+<h3 id="using-the-model-for-inference">
+<a class="anchor" href="#using-the-model-for-inference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the Model for Inference</h3>
+
+<h3 id="creating-a-notebook-app-from-the-model">
+<a class="anchor" href="#creating-a-notebook-app-from-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a Notebook App from the Model</h3>
+
+<h3 id="turning-your-notebook-into-a-real-app">
+<a class="anchor" href="#turning-your-notebook-into-a-real-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Turning Your Notebook into a Real App</h3>
+
+<h3 id="deploying-your-app">
+<a class="anchor" href="#deploying-your-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deploying your app</h3>
+
+<h2 id="how-to-avoid-disaster">
+<a class="anchor" href="#how-to-avoid-disaster" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Avoid Disaster</h2>
+<p><img src="/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_2_Production_files/FastAI2020/Lesson_2_Production/Fastbook_Chapter_2_Production/att_00061.png" alt=""></p>
+
+<h3 id="unforeseen-consequences-and-feedback-loops">
+<a class="anchor" href="#unforeseen-consequences-and-feedback-loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unforeseen Consequences and Feedback Loops</h3>
+
+<h2 id="get-writing">
+<a class="anchor" href="#get-writing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Writing</h2>
+
+<script >
+      var toc_button = document.getElementById('show_toc');
+      var toc_nav = document.getElementsByClassName('section-nav')[0];
+      toc_nav.style.display = 'none'; // hide on initial display
+      var toggle_toc = function(e){
+        if (toc_button.innerText === 'Hide TOC') {
+          toc_button.innerHTML = 'Show TOC';
+          toc_nav.style.display = 'none';
+        } else {
+          toc_button.innerHTML = 'Hide TOC';
+          toc_nav.style.display = 'block';
+        }
+        // e.target.preventDefault();
+        return false;
+      }; 
+      toc_button.addEventListener('click', toggle_toc);    
+    </script></div><a class="u-url" href="/butchland-machine-learning-notes/fastai/2020/06/23/fastbook-chapter-2-production.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/butchland-machine-learning-notes/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/butchland-machine-learning-notes/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My explorations in machine learning</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
