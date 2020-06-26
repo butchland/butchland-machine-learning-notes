@@ -17,6 +17,7 @@ Some of the activities we have is a biweekly meeting focused on presentation of 
 
 As part of making my accountabilities stick, I am publishing it publicly (just not searchable) so I can share my plan with my friends or study group mates and make myself accountable to them.
 
+**Update 6/26/2020:** I haven't been able to meet my deadlines lately and so I'm adding this to reflect my updated priorities and strategies -- in order to reduce my cognitive burden in maintaining schedules using this post to keep track of my targets, I've decided to just limit my deadline to the next thing I need to finish, and will just keep updating my deadlines for the next tasks on completion of the pending tasks. I'll try to keep my [accountability worksheet](https://docs.google.com/spreadsheets/d/1_tddHm4evJIwsfwEvh-T9RMqPVe115WlXOfr-iGj3cU/edit#gid=990074392) updated however, as its much easier to update that. 
 ## My Goals
 
 My goal is to acquire both the theoretical foundations of Machine and Deep Learning as well the practical skills to apply deep learning to particular fields such as computer vision, natural language processing and tabular data, as these are probably the most accessible applications for me right now.
@@ -36,11 +37,11 @@ I also plan on joining a kaggle competition in about a couple of weeks time (onc
 
 1. **Lecture Notes** - review video, read book, answer chapter questionnaire, review other peoples answers, run notebooks, rebuild notebooks from scratch, explore notebook variants, and finally write and publish lecture notes (the deadline of each lecture note is before the start of study group reading meeting for the next lecture). See [tracker](https://docs.google.com/spreadsheets/d/1TOrSfRrLD9i1He8gac9CQ2vXGzF-bnZMimyvhNc6bsg/edit#gid=0)	
 
-	* Lecture 1 (app_jupyter and ch1 intro) and Lecture 2 (ch2 production) - June 2, 2020 _(edit 6/10: reset sched to June 12,2020)_
-	* Lecture 3 (ch 2 production and ch4 mnist basics ) and Lecture 4 (ch4 mnist basics and ch5 pet breeds) - June 9, 2020 _(edit 6/10: reset sched to June 16, 2020)_
-	* Lecture 5 (ch 3 ethics) and Lecture 6 (ch5 pet breeds and ch6 multicat) - June 16, 2020 _(edit 6/10: reset sched to June 20,2020)_
-	* Lecture 7 (ch 8 collab and ch 9 tabular) - June 23, 2020
-	* Lecture 8 (ch 10 nlp and ch 12 nlp dive) - June 30, 2020
+	* Lecture 1 (app_jupyter and ch1 intro) and Lecture 2 (ch2 production) - June 2, 2020 _(edit 6/26: finished ch1 intro and reset sched for ch2 to June 29,2020)_
+	* Lecture 3 (ch 2 production and ch4 mnist basics ) and Lecture 4 (ch4 mnist basics and ch5 pet breeds) - June 9, 2020 _(edit 6/10: reset sched to TBD - after completion of ch2)_
+	* Lecture 5 (ch 3 ethics) and Lecture 6 (ch5 pet breeds and ch6 multicat) - June 16, 2020 _(edit 6/26: reset sched to TBD after completion of ch5)_
+	* Lecture 7 (ch 8 collab and ch 9 tabular) - June 23, 2020 (edit 6/226: reset sched TBD after completion of ch6)
+	* Lecture 8 (ch 10 nlp and ch 12 nlp dive) - June 30, 2020 (edit 6/26: reset sched TBD after completion of ch 9)
 
 2. **Mini projects** _(todo)_ - should cover computer vision, nlp, tabular, collab filter
 
