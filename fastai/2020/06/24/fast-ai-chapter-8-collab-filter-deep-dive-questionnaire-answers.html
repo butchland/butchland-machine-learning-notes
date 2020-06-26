@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Collaborative Filtering Deep Dive | Butch Landingin’s Machine Learning Notes</title>
+<title>Fastbook Chapter 8 Questionnaire Answers | Butch Landingin’s Machine Learning Notes</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Collaborative Filtering Deep Dive" />
+<meta property="og:title" content="Fastbook Chapter 8 Questionnaire Answers" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="My explorations in machine learning" />
-<meta property="og:description" content="My explorations in machine learning" />
-<link rel="canonical" href="https://butchland.github.io/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" />
-<meta property="og:url" content="https://butchland.github.io/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" />
+<meta name="description" content="Fastbook Chapter 8 Questionnaire Answers" />
+<meta property="og:description" content="Fastbook Chapter 8 Questionnaire Answers" />
+<link rel="canonical" href="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" />
+<meta property="og:url" content="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" />
 <meta property="og:site_name" content="Butch Landingin’s Machine Learning Notes" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-24T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"My explorations in machine learning","@type":"BlogPosting","headline":"Collaborative Filtering Deep Dive","dateModified":"2020-06-24T00:00:00-05:00","datePublished":"2020-06-24T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://butchland.github.io/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html"},"url":"https://butchland.github.io/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html","@context":"https://schema.org"}</script>
+{"description":"Fastbook Chapter 8 Questionnaire Answers","@type":"BlogPosting","headline":"Fastbook Chapter 8 Questionnaire Answers","dateModified":"2020-06-24T00:00:00-05:00","datePublished":"2020-06-24T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html"},"url":"https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/butchland-machine-learning-notes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" /><link rel="shortcut icon" type="image/x-icon" href="/butchland-machine-learning-notes/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" />
@@ -72,7 +72,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Collaborative Filtering Deep Dive</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-24T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Fastbook Chapter 8 Questionnaire Answers</h1><p class="page-description">Fastbook Chapter 8 Questionnaire Answers</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-24T00:00:00-05:00" itemprop="datePublished">
         Jun 24, 2020
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -83,32 +83,24 @@ window.onload = wrap_img;
 </span></p>
 
     
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/butchland-machine-learning-notes/categories/#fastai">fastai</a>
+        
+      
+      </p>
+    
 
     
-      
-        <div class="pb-5 d-flex flex-wrap flex-justify-end">
-          <div class="px-2">
-
-    <a href="https://github.com/butchland/butchland-machine-learning-notes/tree/master/_notebooks/2020-06-24-fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.ipynb" role="button" target="_blank">
-<img class="notebook-badge-image" src="/butchland-machine-learning-notes/assets/badges/github.svg" alt="View On GitHub">
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/butchland/butchland-machine-learning-notes/master?filepath=_notebooks%2F2020-06-24-fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/butchland-machine-learning-notes/assets/badges/binder.svg" alt="Open In Binder"/>
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://colab.research.google.com/github/butchland/butchland-machine-learning-notes/blob/master/_notebooks/2020-06-24-fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/butchland-machine-learning-notes/assets/badges/colab.svg" alt="Open In Colab"/>
-    </a>
-</div>
-        </div>
       </header>
 
-  <div class="post-content e-content" itemprop="articleBody"><!--
+  <div class="post-content e-content" itemprop="articleBody"><div class="show_toc_section"><button id="show_toc">Show TOC</button></div><ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Questionnaire">Questionnaire </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Further-Research">Further Research </a></li>
+</ul>
+</li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -124,18 +116,24 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Questionnaire">Questionnaire<a class="anchor-link" href="#Questionnaire"> </a></h2>
+<h2 id="Questionnaire">
+<a class="anchor" href="#Questionnaire" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questionnaire<a class="anchor-link" href="#Questionnaire"> </a>
+</h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
-<li><p>What problem does collaborative filtering solve?</p>
+<li>
+<p>What problem does collaborative filtering solve?</p>
 </li>
-<li><p>How does it solve it?</p>
+<li>
+<p>How does it solve it?</p>
 </li>
 <li>Why might a collaborative filtering predictive model fail to be a very useful recommendation system?</li>
 <li>What does a crosstab representation of collaborative filtering data look like?</li>
@@ -171,9 +169,13 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Further-Research">Further Research<a class="anchor-link" href="#Further-Research"> </a></h3><ol>
+<h3 id="Further-Research">
+<a class="anchor" href="#Further-Research" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further Research<a class="anchor-link" href="#Further-Research"> </a>
+</h3>
+<ol>
 <li>Take a look at all the differences between the <code>Embedding</code> version of <code>DotProductBias</code> and the <code>create_params</code> version, and try to understand why each of those changes is required. If you're not sure, try reverting each change to see what happens. (NB: even the type of brackets used in <code>forward</code> has changed!)</li>
 <li>Find three other areas where collaborative filtering is being used, and find out what the pros and cons of this approach are in those areas.</li>
 <li>Complete this notebook using the full MovieLens dataset, and compare your results to online benchmarks. See if you can improve your accuracy. Look on the book's website and the fast.ai forum for ideas. Note that there are more columns in the full dataset—see if you can use those too (the next chapter might give you ideas).</li>
@@ -186,7 +188,23 @@ window.onload = wrap_img;
 </div>
 
 
-</div><a class="u-url" href="/butchland-machine-learning-notes/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" hidden></a>
+<script >
+      var toc_button = document.getElementById('show_toc');
+      var toc_nav = document.getElementsByClassName('section-nav')[0];
+      toc_nav.style.display = 'none'; // hide on initial display
+      var toggle_toc = function(e){
+        if (toc_button.innerText === 'Hide TOC') {
+          toc_button.innerHTML = 'Show TOC';
+          toc_nav.style.display = 'none';
+        } else {
+          toc_button.innerHTML = 'Hide TOC';
+          toc_nav.style.display = 'block';
+        }
+        // e.target.preventDefault();
+        return false;
+      }; 
+      toc_button.addEventListener('click', toggle_toc);    
+    </script></div><a class="u-url" href="/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
