@@ -1,4 +1,551 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" rel="self" type="application/atom+xml" /><link href="https://butchland.github.io/butchland-machine-learning-notes/" rel="alternate" type="text/html" /><updated>2020-06-10T06:35:59-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/feed.xml</id><title type="html">Butch Landingin’s Machine Learning Notes</title><subtitle>My explorations in machine learning</subtitle><entry><title type="html">Fastbook Chapter 2 Questionnaire Answers</title><link href="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/02/fast-ai-chapter-2-prod-questionnaire-answers.html" rel="alternate" type="text/html" title="Fastbook Chapter 2 Questionnaire Answers" /><published>2020-06-02T00:00:00-05:00</published><updated>2020-06-02T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/02/fast-ai-chapter-2-prod-questionnaire-answers</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/02/fast-ai-chapter-2-prod-questionnaire-answers.html">&lt;!--
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" rel="self" type="application/atom+xml" /><link href="https://butchland.github.io/butchland-machine-learning-notes/" rel="alternate" type="text/html" /><updated>2020-06-26T10:40:54-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/feed.xml</id><title type="html">Butch Landingin’s Machine Learning Notes</title><subtitle>My explorations in machine learning</subtitle><entry><title type="html">Fastbook Chapter 1 Introduction</title><link href="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/22/fastbook-chapter-1-introduction.html" rel="alternate" type="text/html" title="Fastbook Chapter 1 Introduction" /><published>2020-06-22T00:00:00-05:00</published><updated>2020-06-22T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/22/fastbook-chapter-1-introduction</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/22/fastbook-chapter-1-introduction.html">&lt;p&gt;&lt;em&gt;These are my notes from my reading of the fastai book&lt;/em&gt;
+&lt;em&gt;by Jeremy Howard and Sylvain Gugger&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-00-49-fastbook.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;your-deep-learning-journey&quot;&gt;Your Deep Learning Journey&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Deep Learning is for Everyone&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Deep Learning (DL)&lt;/strong&gt;  is a powerful tool that uses data to build powerful applications that would otherwise have been impossible to build using normal programming techniques.
+    &lt;ul&gt;
+      &lt;li&gt;Can be applied across many disciplines&lt;/li&gt;
+      &lt;li&gt;Domain experts can find new applications for it&lt;/li&gt;
+      &lt;li&gt;Need more people with different backgrounds to get involved and start using it&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/&quot;&gt;fast.ai&lt;/a&gt; was founded to spread DL into the hands of as many people as possible&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Accessibility:&lt;/strong&gt; DL is a technology that is accessible to normal folks. You don’t need:
+    &lt;ul&gt;
+      &lt;li&gt;lots of math&lt;/li&gt;
+      &lt;li&gt;lots of data&lt;/li&gt;
+      &lt;li&gt;lots of expensive computers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-06-41-what-you-dont-need-in-dl.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;: high school math, some coding experience required preferably Python
+    &lt;ul&gt;
+      &lt;li&gt;but Python is easy to learn, lots of &lt;a href=&quot;https://www.learnpython.org/&quot;&gt;free online courses&lt;/a&gt; teach it.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Why learn DL?&lt;/strong&gt;  - Areas/Fields/Disciplines where DL is now best in the world:
+    &lt;ul&gt;
+      &lt;li&gt;Natural Language Processing (NLP)&lt;/li&gt;
+      &lt;li&gt;Computer Vision (CV)&lt;/li&gt;
+      &lt;li&gt;Medicine&lt;/li&gt;
+      &lt;li&gt;Biology&lt;/li&gt;
+      &lt;li&gt;Image Generation&lt;/li&gt;
+      &lt;li&gt;Recommendation Systems&lt;/li&gt;
+      &lt;li&gt;Playing Games&lt;/li&gt;
+      &lt;li&gt;Robotics&lt;/li&gt;
+      &lt;li&gt;Others&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-08-41-dl-sota-areas.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;neural-networks-a-brief-history&quot;&gt;Neural Networks: A Brief History&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-10-08-neural-networks-rosenblatt.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Warren McCulloch and Walter Pitts, 1943&lt;/strong&gt; - developed mathematical model of artificial neuron&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Frank Rosenblatt,&lt;/strong&gt; gave the artificial neural network (NN) the ability to learn, and built the &lt;em&gt;Mark 1 Perceptron&lt;/em&gt;, a machine capable of recognizing simple shapes&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Marvin Minsky &amp;amp; Seymour Papert&lt;/strong&gt; wrote &lt;em&gt;Perceptrons&lt;/em&gt; (book)
+    &lt;ul&gt;
+      &lt;li&gt;asserted that NNs are limited
+        &lt;ul&gt;
+          &lt;li&gt;1 layer NNs can’t even compute XOR&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;but also asserted 2 layers can compute more complex functions
+        &lt;ul&gt;
+          &lt;li&gt;this was kind of disregarded, instead people focused only on the 1st assertion&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;as a result, research on NNs was almost non-existent in the next 2 decades
+        &lt;ul&gt;
+          &lt;li&gt;led to first AI winter&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In 1986, MIT published the 2 volume book &lt;strong&gt;Parallel Distributed Processing (PDP)&lt;/strong&gt;,  where it asserts that a NN-based system requires:
+    &lt;ul&gt;
+      &lt;li&gt;processing units&lt;/li&gt;
+      &lt;li&gt;activation state&lt;/li&gt;
+      &lt;li&gt;output function&lt;/li&gt;
+      &lt;li&gt;pattern of connectivity&lt;/li&gt;
+      &lt;li&gt;propagation rule&lt;/li&gt;
+      &lt;li&gt;activation rule&lt;/li&gt;
+      &lt;li&gt;learning rule&lt;/li&gt;
+      &lt;li&gt;environment&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-10-38-pdp-pipeline.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;80’s and 90s -&lt;/strong&gt; 2 layer NN began to widely used for real practical projects. but were too big or to slow&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;90s&lt;/strong&gt; researchers showed that more layers needed to get practical good performance.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;last decade&lt;/strong&gt; - increases in data availability, improvements in hardware, algorithmic tweaks made deep neural networks practical and powerful.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;who-we-are&quot;&gt;Who We Are&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jeremy, Sylvain, Rachel
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.fast.ai/about/#founders&quot;&gt;About FastAI Team&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.fast.ai/images/jh-head.jpg&quot; alt=&quot;headpic&quot; title=&quot;Jeremy Howard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.fast.ai/images/thomas.JPG&quot; alt=&quot;headpic&quot; title=&quot;Rachel Thomas&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.fast.ai/images/sg-head.jpg&quot; alt=&quot;headpic&quot; title=&quot;Sylvain Gugger&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-learn-dl&quot;&gt;How to learn DL&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Based on work by David Perkins, “Making Learning Whole”
+    &lt;ul&gt;
+      &lt;li&gt;learn the whole game&lt;/li&gt;
+      &lt;li&gt;learn through examples&lt;/li&gt;
+      &lt;li&gt;simplify as much as possible&lt;/li&gt;
+      &lt;li&gt;remove barriers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-16-38-play-whole-game.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Code and try to solve problems - theory can come later.&lt;/li&gt;
+  &lt;li&gt;Much of deep learning is still artisanal and can only be learned by actual experience in building models and datasets.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tenacity is key&lt;/strong&gt; - getting stuck is normal. rewind and read slowly if stuck, experiment and google.&lt;/li&gt;
+  &lt;li&gt;Apply to personal projects so you can sustain interest&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;projects-and-mindset&quot;&gt;Projects and Mindset&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Get good test cases and projects&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;focus on hobbies and passion&lt;/li&gt;
+      &lt;li&gt;try something not to ambitious at first, so that you don’t get stuck.&lt;/li&gt;
+      &lt;li&gt;set 4 or 5 little projects instead of 1 grand project.&lt;/li&gt;
+      &lt;li&gt;once you’ve done some little projects, go for bigger project you can show off.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Character traits for success&lt;/strong&gt;: playfulness and curiosity.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-software-stack-pytorch-fastai-jupyter&quot;&gt;The Software Stack: Pytorch, fastai, Jupyter&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-23-35-fastai-pytorch.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Pytorch&lt;/strong&gt; &lt;a href=&quot;https://pytorch.org&quot;&gt;provides&lt;/a&gt; low level foundation&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;fastai&lt;/strong&gt; &lt;a href=&quot;https://dev.fast.ai&quot;&gt;provides&lt;/a&gt; higher level abstractions and productivity&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-25-57-fastai-paper.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Jupyter notebook&lt;/strong&gt; - &lt;a href=&quot;https://jupyter.org/&quot;&gt;provides&lt;/a&gt; the experimentation and documentation environment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;first-model&quot;&gt;First Model&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setup your GPU DL Server
+    &lt;ul&gt;
+      &lt;li&gt;use Cloud (e.g. &lt;a href=&quot;https://colab.research.google.com&quot;&gt;Colab&lt;/a&gt; or &lt;a href=&quot;https://gradient.paperspace.com/&quot;&gt;Paperspace&lt;/a&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Run your first notebook
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/fastai/course-v4&quot;&gt;Course notebooks site&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://book.fast.ai&quot;&gt;Book site&lt;/a&gt; and &lt;a href=&quot;https://github.com/fastai/fastbook&quot;&gt;book notebooks&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;setup account (gmail for colab, email for paperspace)
+        &lt;ul&gt;
+          &lt;li&gt;for paperspace - see &lt;a href=&quot;https://course.fast.ai/start_gradient.html&quot;&gt;paperspace setup&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;for colab - see &lt;a href=&quot;https://course.fast.ai/start_colab.html&quot;&gt;colab setup&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;load notebooks
+        &lt;ul&gt;
+          &lt;li&gt;for colab
+            &lt;ul&gt;
+              &lt;li&gt;modify notebook for colab environment - see &lt;a href=&quot;https://forums.fast.ai/t/platform-colab-free-10-month-pro/65525&quot;&gt;forum post&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;setup google drive to clone course notebooks&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;view &lt;a href=&quot;https://github.com/fastai/course-v4/blob/master/nbs/app_jupyter.ipynb&quot;&gt;app_jupyter.ipynb&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;run &lt;a href=&quot;https://github.com/fastai/course-v4/blob/master/nbs/01_intro.ipynb&quot;&gt;first notebook&lt;/a&gt;: Cats and Dogs Image Classifier
+        &lt;ul&gt;
+          &lt;li&gt;duplicate and save notebook&lt;/li&gt;
+          &lt;li&gt;get dataset, create dataloader, create learner, train model&lt;/li&gt;
+          &lt;li&gt;do inference on model&lt;/li&gt;
+          &lt;li&gt;build image uploader and run inference on uploader using trained model: &lt;em&gt;is this a cat?&lt;/em&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/cute-kitty.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-is-machine-learning-ml&quot;&gt;What is Machine Learning (ML)&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Deep learning is a modern area in the general discipline of ML&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Normal Programs&lt;/strong&gt; - make computer do a task by giving it detailed instructions
+    &lt;ul&gt;
+      &lt;li&gt;inputs → program → outputs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/programs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ML is an ALTERNATIVE way to get computers to do a task by giving it examples&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Arthur Samuels formulation (IBM, 1949) - 1962 essay - &lt;em&gt;AI: A frontier of automation:&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;weights&lt;/strong&gt; are assigned
+        &lt;ul&gt;
+          &lt;li&gt;weights are variables - given a particular choice of values&lt;/li&gt;
+          &lt;li&gt;inputs are values processed to produce results,&lt;/li&gt;
+          &lt;li&gt;weights are other values that define how the program will operate.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;every weight assignment &lt;strong&gt;results&lt;/strong&gt; in some level of &lt;strong&gt;performance&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;automated means of &lt;strong&gt;measuring performance&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;mechanism for &lt;strong&gt;improving performance&lt;/strong&gt; by weight assignments&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Training Models&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;inputs + weights → model → outputs + labels → performance → (update) → weights&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/trainmodels2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;using modern terms&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/trainmodels3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cat Dog Image Recognition Example
+    &lt;ul&gt;
+      &lt;li&gt;inputs  -&amp;gt; images of cats and dogs&lt;/li&gt;
+      &lt;li&gt;parameters -&amp;gt; “weights”&lt;/li&gt;
+      &lt;li&gt;outputs -&amp;gt; predict whether its a cat or dog&lt;/li&gt;
+      &lt;li&gt;label -&amp;gt; actual value whether image is a cat or dog&lt;/li&gt;
+      &lt;li&gt;loss - if output matches label -&amp;gt; loss is low, if output does not match label -&amp;gt; loss is high&lt;/li&gt;
+      &lt;li&gt;after measuring loss, update the parameters using SGD&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Inference (after training)
+    &lt;ul&gt;
+      &lt;li&gt;inputs + weights (now part of model) → outputs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/trainmodels.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-neural-network-nn&quot;&gt;What is a Neural Network (NN)?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A function that can compute any set of outputs given a set of inputs&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Universal Approximation Theorem&lt;/strong&gt; - &lt;a href=&quot;https://en.wikipedia.org/wiki/Universal_approximation_theorem&quot;&gt;shows&lt;/a&gt; that neural networks can solve any problem to any level of accuracy.&lt;/li&gt;
+  &lt;li&gt;To find a way to update the “weights”  of a NN in order to improve its performance, we use &lt;strong&gt;Stochastic Gradient Descent (&lt;/strong&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Stochastic_gradient_descent&quot;&gt;SGD&lt;/a&gt;&lt;strong&gt;)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;deep-learning-jargon&quot;&gt;Deep Learning Jargon&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Architecture&lt;/em&gt; - functional form of the model&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Parameters&lt;/em&gt; - “weights” that form the model&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Predictions&lt;/em&gt; are calculated from the &lt;em&gt;independent variables&lt;/em&gt;, which is the &lt;em&gt;input data&lt;/em&gt; not including the &lt;em&gt;labels&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Outputs&lt;/em&gt; of the model given its &lt;em&gt;inputs&lt;/em&gt; (which are the &lt;em&gt;independent variables&lt;/em&gt;) are called &lt;em&gt;predictions *and are also considered the *dependent variables&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;The measure of &lt;em&gt;performance&lt;/em&gt; is called the &lt;em&gt;loss&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Loss&lt;/em&gt; is dependent on the &lt;em&gt;predictions&lt;/em&gt; plus the correct &lt;em&gt;labels&lt;/em&gt; aka &lt;em&gt;targets&lt;/em&gt; or &lt;em&gt;dependent variables&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;inputs + parameters → model architecture → predictions (outputs) + labels → loss → (update) parameters&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/trainmodels3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;limitations-inherent-in-ml&quot;&gt;Limitations inherent in ML&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A model cannot be created without data&lt;/li&gt;
+  &lt;li&gt;A model can only learn to operate on patterns seen in the input data used to train it&lt;/li&gt;
+  &lt;li&gt;The learning approach creates &lt;em&gt;predictions&lt;/em&gt; not recommended actions&lt;/li&gt;
+  &lt;li&gt;It is not enough to have examples of input data, we also need the &lt;em&gt;labels&lt;/em&gt; for the input data&lt;/li&gt;
+  &lt;li&gt;Need to think about how ML is applied since its predictions are sometimes used for recommendation systems that can predict what a user is most likely to do.&lt;/li&gt;
+  &lt;li&gt;Also need to think about the &lt;em&gt;environment&lt;/em&gt; where ML is applied and how it interacts with the environment it is getting its data from.
+    &lt;ul&gt;
+      &lt;li&gt;example : recommender systems creating feedback loops
+        &lt;ul&gt;
+          &lt;li&gt;predictive policing model - amplifies existing racial bias in policing by predicting more crime in areas where POC are dominant and recommends more policing in those areas, leading to more arrests — arrests proxy for crime, so data (and models based on the data) will lead to a positive feedback loop.&lt;/li&gt;
+          &lt;li&gt;youtube videos recommending more extremist views to increase engagement — since videos with extremist views tend to be more engaging, system recommends those videos, leading viewers to espouse more extremist views and encouraging them to engage more with those types of extremist videos.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-the-image-recognizer-works&quot;&gt;How the Image Recognizer works&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Model Training&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Code sample&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from fastai2.vision.all import *
+
+path = untar_data(URLs.PETS)
+
+def is_cat(item): return item.name[0].isupper()
+
+dls = ImageDataLoaders.from_name_func(path, get_image_files(path),
+          label_func=is_cat,item_tfms=Resize(224),valid_pct=0.2, 
+          seed=42)
+learn = cnn_learner(dls,resnet34, metrics=error_rate)
+learn.fine_tune(1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;from fastai2.vision.all import * :&lt;/code&gt; import fastai library  - fastai2.vision.all package contains all the needed functions&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;path = untar_data(URLs.PETS)&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; download data from a URL&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;def is_cat(item)...:&lt;/code&gt; define function to determine label based on filename
+    &lt;ul&gt;
+      &lt;li&gt;for the PETS dataset, if the name of the file is capitalized, its a cat, otherwise its a dog&lt;/li&gt;
+      &lt;li&gt;the type of the output or label determines the type of ML problem:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;regression&lt;/strong&gt; - when output is continuous value&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;classification&lt;/strong&gt; - when output is a discrete set of values&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;dls = ImageDataLoaders.from_name_func...&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; defines how to load data that will be fed to the model using a &lt;em&gt;dataloader&lt;/em&gt; object
+    &lt;ul&gt;
+      &lt;li&gt;what type of data is input (&lt;em&gt;Image&lt;/em&gt;)&lt;/li&gt;
+      &lt;li&gt;what output is expected (&lt;code class=&quot;highlighter-rouge&quot;&gt;label_func=is_cat&lt;/code&gt; to determine target label)&lt;/li&gt;
+      &lt;li&gt;what transforms need to be applied to input data.
+        &lt;ul&gt;
+          &lt;li&gt;item transforms - applied to each item (&lt;code class=&quot;highlighter-rouge&quot;&gt;Resize(224)&lt;/code&gt;)
+            &lt;ul&gt;
+              &lt;li&gt;224 is standard for historical reasons (pretrained model used 224x224 as image size)&lt;/li&gt;
+              &lt;li&gt;can increase size for better detail and possibly better results, but more resource intensive, reducing size reduces detail, but can run much faster with less memory&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;batch transforms - applied to a batch of items (typically on GPU so its fast)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;split &lt;em&gt;validation&lt;/em&gt; from &lt;em&gt;training&lt;/em&gt; sets - by default 20% of input is randomly selected as validation with a set &lt;code class=&quot;highlighter-rouge&quot;&gt;seed=42&lt;/code&gt; (to fix the splitting)
+        &lt;ul&gt;
+          &lt;li&gt;&lt;em&gt;why split into training and validation sets?&lt;/em&gt;
+            &lt;ul&gt;
+              &lt;li&gt;NNs can “memorize” the training data, which will make model predict well with data used in training, but will not generalize to other data not used in training.&lt;/li&gt;
+              &lt;li&gt;By setting aside data in a validation set, this data in the validation set is not used in training, but is used to monitor &lt;em&gt;overfitting&lt;/em&gt;.&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;Overfitting&lt;/strong&gt; occurs when NN is optimizing on training data but performance on validation set is worsening.
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;strong&gt;Overfitting&lt;/strong&gt; is one of the most important and challenging issue in ML&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;learn = cnn_learner(..&lt;/code&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; create cnn learner with architecture and metrics using dataloader
+    &lt;ul&gt;
+      &lt;li&gt;set &lt;em&gt;validation metrics&lt;/em&gt; to show model performance and monitor &lt;strong&gt;overfitting&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Metrics&lt;/strong&gt; is different from &lt;strong&gt;loss&lt;/strong&gt; - metrics measure &lt;em&gt;quality&lt;/em&gt; of model predictions, loss is used for tracking how the &lt;em&gt;performance&lt;/em&gt; changes as model parameters are changed (used in training)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;set the &lt;em&gt;architecture&lt;/em&gt; - in our case &lt;code class=&quot;highlighter-rouge&quot;&gt;resnet34&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;different architectures available
+        &lt;ul&gt;
+          &lt;li&gt;example &lt;em&gt;resnet34&lt;/em&gt; comes with 34 layers, &lt;em&gt;resnet50&lt;/em&gt; with 50, &lt;em&gt;resnet152&lt;/em&gt; with 152 layers, etc
+            &lt;ul&gt;
+              &lt;li&gt;visualize the NN as consisting of layered cake - with the inputs (images) entering from the bottom and the predictions coming out from the top (aka the head)…&lt;/li&gt;
+              &lt;li&gt;NN with 50 and 152 layers are bigger than one with 34 layers, resnet18 is the smallest in the resnet family.&lt;/li&gt;
+              &lt;li&gt;smaller NNs are faster to train, larger NNs are more powerful in capturing nuances (in general)&lt;/li&gt;
+              &lt;li&gt;to find the ideal size, you have to experiment - but resnet34 is usually a good compromise and default&lt;/li&gt;
+              &lt;li&gt;there are also other families and variations within familities of architectures&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;pretrained flag - default to true&lt;/strong&gt; - use pretrained weights - where a model trained in a different related task is reused for another task, reducing the amount of training time and data needed to achieve good performance.
+    &lt;ul&gt;
+      &lt;li&gt;pretrained will remove the last (topmost) layer and replace with 1 or more randomised layers specific for your task.&lt;/li&gt;
+      &lt;li&gt;using a pretrained model is &lt;strong&gt;the most important method&lt;/strong&gt; to allow us to train accurate models, more quickly with less data and less time and money.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Transfer learning&lt;/strong&gt; - using a pretrained model for a task different from what it was trained for. 
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Most important technique&lt;/strong&gt; to reduce resources (data, compute, time) needed to train models to acceptable or even state of the art (SOTA) performance&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;learn.fine_tune(1)&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; fit (i.e. train)  the model to your task.
+    &lt;ul&gt;
+      &lt;li&gt;1 is the number of epochs - the number of times your model looks at each sample of input data.&lt;/li&gt;
+      &lt;li&gt;there is also a &lt;code class=&quot;highlighter-rouge&quot;&gt;fit&lt;/code&gt; method that does fit the model, but &lt;code class=&quot;highlighter-rouge&quot;&gt;fine_tune&lt;/code&gt; does additional “tricks” to adapt a pretrained model for a new dataset, a process known as &lt;em&gt;fine tuning&lt;/em&gt;.
+        &lt;ul&gt;
+          &lt;li&gt;fine tune - 1. use one epoch (aka freeze_epochs parameter defaulted to 1) - to train just the head, with the rest of the model frozen&lt;/li&gt;
+          &lt;li&gt;unfreeze the lower layers, and train using the &lt;em&gt;discriminative learning rates&lt;/em&gt;, where the lower layers (which need less adjustments since it has already been pretrained) are trained with lower learning rate, the &lt;em&gt;head&lt;/em&gt; (which starts with random values) is trained with higher rates
+            &lt;ul&gt;
+              &lt;li&gt;the &lt;em&gt;learning rate&lt;/em&gt; is a “&lt;em&gt;hyperparameter&lt;/em&gt;” - a knob that is used to tweak the training of the model in order to make the model achieve a better level of performance faster.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-our-image-recognizer-learned&quot;&gt;What our Image Recognizer Learned&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the model might be performing well, but its still a “black box” as to what its really doing (this is a known problem in ML).&lt;/li&gt;
+  &lt;li&gt;there are techniques to inspect DL models and get insights, but it can be challenging to understand, especially when they encounter data that is very different from the one used in training the model.&lt;/li&gt;
+  &lt;li&gt;Zeiler and Fergus, 2013 - &lt;a href=&quot;https://arxiv.org/pdf/1311.2901.pdf&quot;&gt;Visualizing and Understanding CNNs&lt;/a&gt; - visualization of NN weights learned in each layer.
+    &lt;ul&gt;
+      &lt;li&gt;lower layers - simple shapes&lt;/li&gt;
+      &lt;li&gt;higher layers - more complex shapes combined from lower layers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/layer1.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/layer2.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/chapter2_layer3.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/chapter2_layer4and5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The model (Alexnet) studied had only 5 layers so deeper networks even can recognize even more complex features.
+The upper layers (ie. the head) are specialized for the task specific to your model (distinguishing cats from dogs) and so require higher learning rates compared to lower layers which share more or less the same features as the pretrained model.&lt;/p&gt;
+
+&lt;h2 id=&quot;extending-image-recognizers-to-handle-non-image-tasks&quot;&gt;Extending Image Recognizers to handle Non-Image Tasks&lt;/h2&gt;
+
+&lt;p&gt;One way to extend image recognizers is by converting data into images which can then reuse pretrained image models.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sound - converted to spectograms - see this &lt;a href=&quot;https://medium.com/@etown/great-results-on-audio-classification-with-fastai-library-ccaf906c5f52&quot;&gt;article&lt;/a&gt; using fastai for audio classification&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/att_00012.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mouse movements - Splunk converted recorded mouse movements into images which were then used to train a bot detector - &lt;a href=&quot;https://www.splunk.com/en_us/blog/security/deep-learning-with-splunk-and-tensorflow-for-security-catching-the-fraudster-in-neural-networks-with-behavioral-biometrics.html&quot;&gt;see this article&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/att_00014.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;General tip:&lt;/strong&gt; if your data can be converted to image data and the images can be classified by humans looking at the images, chances are image recognizers using transfer learning can be trained to classify them as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;more-jargon&quot;&gt;More Jargon&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Label&lt;/li&gt;
+  &lt;li&gt;Architecture&lt;/li&gt;
+  &lt;li&gt;Model&lt;/li&gt;
+  &lt;li&gt;Parameters&lt;/li&gt;
+  &lt;li&gt;Fit&lt;/li&gt;
+  &lt;li&gt;Train&lt;/li&gt;
+  &lt;li&gt;Pretrained Model&lt;/li&gt;
+  &lt;li&gt;Fine tuning&lt;/li&gt;
+  &lt;li&gt;Epoch&lt;/li&gt;
+  &lt;li&gt;Loss&lt;/li&gt;
+  &lt;li&gt;Metric&lt;/li&gt;
+  &lt;li&gt;Generalization&lt;/li&gt;
+  &lt;li&gt;Overfitting&lt;/li&gt;
+  &lt;li&gt;Training Set&lt;/li&gt;
+  &lt;li&gt;Validation Sets&lt;/li&gt;
+  &lt;li&gt;Convolutional NNs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;other-applications-of-dl&quot;&gt;Other applications of DL&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Image Segmentation&lt;/strong&gt; - label each pixel with object it belongs to
+    &lt;ul&gt;
+      &lt;li&gt;CamVid example using subset of data from the paper &lt;a href=&quot;http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/&quot;&gt;Semantic Object Classes in Video: A High-Definition Ground Truth Database&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/dlcp_01in03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Sentiment Classification&lt;/strong&gt; (Natural Language Processing or NLP) - tells you if movie review is positive or negative
+    &lt;ul&gt;
+      &lt;li&gt;Movie Review Sentiment Classification using IMDB data from the paper &lt;a href=&quot;https://ai.stanford.edu/~amaas/data/sentiment/&quot;&gt;Learning Word Vectors for Sentiment Analysis&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Tabular Data&lt;/strong&gt; - predicts income based on multiple factors such as age, educational attainment etc.
+    &lt;ul&gt;
+      &lt;li&gt;Income prediction using &lt;a href=&quot;https://archive.ics.uci.edu/ml/datasets/adult&quot;&gt;Adult dataset&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Recommendation Systems&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Movie Recommendation using &lt;a href=&quot;https://doi.org/10.1145/2827872&quot;&gt;movie lens dataset&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;validation-sets-and-test-sets&quot;&gt;Validation Sets and Test Sets&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;train set&lt;/strong&gt; - data seen by model during training&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;validation set&lt;/strong&gt; - used for evaluating model - test model to generalize and tweak it appropriately (hyper parameter tuning)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;test set&lt;/strong&gt; - data reserved for predicting performance in the real world (after tweaking)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;TIP&lt;/strong&gt; for creating validation and test sets - simulate data that will be encountered in production - random subsets may not always be best way to select validation - e.g. time series data - should use continuous data in the future w.r.t. to data used or images not in training data (assuming they occur multiple times)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">These are my notes from my reading of the fastai book by Jeremy Howard and Sylvain Gugger</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://butchland.github.io/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-00-49-fastbook.png" /><media:content medium="image" url="https://butchland.github.io/butchland-machine-learning-notes/assets/images/Fastbook_Chapter_1_Introduction_files/FastAI2020/Lesson_1_Introduction/Fastbook_Chapter_1_Introduction/00-00-49-fastbook.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fastbook Chapter 2 Questionnaire Answers</title><link href="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/02/fast-ai-chapter-2-prod-questionnaire-answers.html" rel="alternate" type="text/html" title="Fastbook Chapter 2 Questionnaire Answers" /><published>2020-06-02T00:00:00-05:00</published><updated>2020-06-02T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/02/fast-ai-chapter-2-prod-questionnaire-answers</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/02/fast-ai-chapter-2-prod-questionnaire-answers.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -625,6 +1172,7 @@
 
 &lt;p&gt;As part of making my accountabilities stick, I am publishing it publicly (just not searchable) so I can share my plan with my friends or study group mates and make myself accountable to them.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Update 6/26/2020:&lt;/strong&gt; I haven’t been able to meet my deadlines lately and so I’m adding this to reflect my updated priorities and strategies – in order to reduce my cognitive burden in maintaining schedules using this post to keep track of my targets, I’ve decided to just limit my deadline to the next thing I need to finish, and will just keep updating my deadlines for the next tasks on completion of the pending tasks. I’ll try to keep my &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1_tddHm4evJIwsfwEvh-T9RMqPVe115WlXOfr-iGj3cU/edit#gid=990074392&quot;&gt;accountability worksheet&lt;/a&gt; updated however, as its much easier to update that.&lt;/p&gt;
 &lt;h2 id=&quot;my-goals&quot;&gt;My Goals&lt;/h2&gt;
 
 &lt;p&gt;My goal is to acquire both the theoretical foundations of Machine and Deep Learning as well the practical skills to apply deep learning to particular fields such as computer vision, natural language processing and tabular data, as these are probably the most accessible applications for me right now.&lt;/p&gt;
@@ -647,11 +1195,11 @@ I plan to focus on the fastai materials for now. My goal is to build a set of le
     &lt;p&gt;&lt;strong&gt;Lecture Notes&lt;/strong&gt; - review video, read book, answer chapter questionnaire, review other peoples answers, run notebooks, rebuild notebooks from scratch, explore notebook variants, and finally write and publish lecture notes (the deadline of each lecture note is before the start of study group reading meeting for the next lecture). See &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1TOrSfRrLD9i1He8gac9CQ2vXGzF-bnZMimyvhNc6bsg/edit#gid=0&quot;&gt;tracker&lt;/a&gt;&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;Lecture 1 (app_jupyter and ch1 intro) and Lecture 2 (ch2 production) - June 2, 2020 &lt;em&gt;(edit 6/10: reset sched to June 12,2020)&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Lecture 3 (ch 2 production and ch4 mnist basics ) and Lecture 4 (ch4 mnist basics and ch5 pet breeds) - June 9, 2020 &lt;em&gt;(edit 6/10: reset sched to June 16, 2020)&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Lecture 5 (ch 3 ethics) and Lecture 6 (ch5 pet breeds and ch6 multicat) - June 16, 2020 &lt;em&gt;(edit 6/10: reset sched to June 20,2020)&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Lecture 7 (ch 8 collab and ch 9 tabular) - June 23, 2020&lt;/li&gt;
-      &lt;li&gt;Lecture 8 (ch 10 nlp and ch 12 nlp dive) - June 30, 2020&lt;/li&gt;
+      &lt;li&gt;Lecture 1 (app_jupyter and ch1 intro) and Lecture 2 (ch2 production) - June 2, 2020 &lt;em&gt;(edit 6/26: finished ch1 intro and reset sched for ch2 to June 29,2020)&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Lecture 3 (ch 2 production and ch4 mnist basics ) and Lecture 4 (ch4 mnist basics and ch5 pet breeds) - June 9, 2020 &lt;em&gt;(edit 6/10: reset sched to TBD - after completion of ch2)&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Lecture 5 (ch 3 ethics) and Lecture 6 (ch5 pet breeds and ch6 multicat) - June 16, 2020 &lt;em&gt;(edit 6/26: reset sched to TBD after completion of ch5)&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Lecture 7 (ch 8 collab and ch 9 tabular) - June 23, 2020 (edit 6/226: reset sched TBD after completion of ch6)&lt;/li&gt;
+      &lt;li&gt;Lecture 8 (ch 10 nlp and ch 12 nlp dive) - June 30, 2020 (edit 6/26: reset sched TBD after completion of ch 9)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
