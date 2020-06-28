@@ -10,6 +10,11 @@ butch-server: .FORCE
 	docker-compose down --remove-orphans || true;
 	docker-compose up fastpages converter watcher butch-jekyll
 
+butch-run: .FORCE
+	docker-compose down --remove-orphans || true;
+	docker-compose up fastpages converter watcher butch-jekyll-run
+
+
 # start (or restart) the services in detached mode
 server-detached: .FORCE
 	docker-compose down || true;
