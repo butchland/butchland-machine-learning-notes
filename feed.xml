@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" rel="self" type="application/atom+xml" /><link href="https://butchland.github.io/butchland-machine-learning-notes/" rel="alternate" type="text/html" /><updated>2020-06-26T11:17:06-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/feed.xml</id><title type="html">Butch Landingin’s Machine Learning Notes</title><subtitle>My explorations in machine learning</subtitle><entry><title type="html">Fastbook Chapter 8 Questionnaire Answers</title><link href="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" rel="alternate" type="text/html" title="Fastbook Chapter 8 Questionnaire Answers" /><published>2020-06-24T00:00:00-05:00</published><updated>2020-06-24T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html">&lt;!--
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" rel="self" type="application/atom+xml" /><link href="https://butchland.github.io/butchland-machine-learning-notes/" rel="alternate" type="text/html" /><updated>2020-06-29T11:42:16-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/feed.xml</id><title type="html">Butch Landingin’s Machine Learning Notes</title><subtitle>My explorations in machine learning</subtitle><entry><title type="html">Fast.ai Deep Learning Adventure Guides (Part 1)</title><link href="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/28/fastai-deeplearning-adventure-guides.html" rel="alternate" type="text/html" title="Fast.ai Deep Learning Adventure Guides (Part 1)" /><published>2020-06-28T00:00:00-05:00</published><updated>2020-06-28T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/28/fastai-deeplearning-adventure-guides</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/28/fastai-deeplearning-adventure-guides.html">&lt;p&gt;&lt;img src=&quot;/butchland-machine-learning-notes/images/dora-map-explorer.png&quot; alt=&quot;dora explorer map&quot; title=&quot;Dora the Explorer Map - credits to https://www.mobygames.com/game/windows/dora-the-explorer-swipers-big-adventure/screenshots&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;fastai-deep-learning-adventure-guides-part-1---rationale&quot;&gt;FastAI Deep Learning Adventure Guides (Part 1 - Rationale)&lt;/h1&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;FastAI Deep Learning Adventure Guides&lt;/strong&gt; is an initiative to provide first-time fastai learners with a more formalized, structured study group, with a fixed schedule, led by more experienced fastai community members on a volunteer basis, to make the online course (MOOC version) more engaging and effective specially for non-programmers.&lt;/p&gt;
+
+&lt;h2 id=&quot;rationale&quot;&gt;Rationale&lt;/h2&gt;
+
+&lt;h3 id=&quot;my-fastai-experience&quot;&gt;My fastai experience&lt;/h3&gt;
+
+&lt;p&gt;When I first joined the fastai MOOC (Practical Deep Learning for Coders) around January last year, I first felt very enthusiastic and energized to view the lectures, run the notebooks, and participate in the forums – as a result, I’ve learned a lot from the first 4 lectures.&lt;/p&gt;
+
+&lt;p&gt;But as the weeks passed, my interest waned, not because I wasn’t learning anything – quite the opposite – I learned more from the fastai MOOC about applying Deep Learning in the real world than I did from Andrew Ng’s Machine Learning course from Coursera.&lt;/p&gt;
+
+&lt;p&gt;I still listened to the last 3 lectures, I but didn’t do the additional coursework that would have cemented the concepts deep into my mind.&lt;/p&gt;
+
+&lt;p&gt;By the time the 2nd part of the course came, I had an even harder time catching up, and thus ended my interest in the latter parts of the Part 2 of the course.&lt;/p&gt;
+
+&lt;p&gt;A major factor for this waning interest is that learning remotely can be quite isolating – and despite having a fantastic and supportive community in the forums, I felt at a loss in figuring out what personal projects I could pursue to further cement my understanding of the topics.&lt;/p&gt;
+
+&lt;p&gt;Though I tried to maintain a weekly schedule (following the live course’s pace), there was nothing that really pushed me to complete something each week.&lt;/p&gt;
+
+&lt;p&gt;I suspect that I am not alone in this – there may have been a lot of MOOC learners whose interest would not have waned had there been more support for their learning needs. &lt;em&gt;I know a learner’s individual &lt;strong&gt;tenacity&lt;/strong&gt; is key to success in this course, but anything we can do to make it more effective is worth pursuing, I think.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So when I got invited to the 2020 live online edition of the fastai course, I was stoked and energized again to deepen my understanding of machine learning and deep learning.&lt;/p&gt;
+
+&lt;p&gt;This time around, I resolved to make my learning more consistent and effective.&lt;/p&gt;
+
+&lt;p&gt;I think I did a lot better this time around – I was able to finish the 8 lectures and I was more active in the forums and did the course work assignments more religiously than last time.&lt;/p&gt;
+
+&lt;p&gt;Moreover, as of today, almost two months after the live online course officially ended, I have kept up my interest and am still doing everything I can everyday to deepen my understanding of the field (Of course, another factor that may have inadvertently helped was the quarantine due to COVID-19).&lt;/p&gt;
+
+&lt;p&gt;However, I believe the biggest factor in my sustained interest this time around was due to the fact that I joined an online study group during the live online weekly lectures, – actually 2 study groups: the Unofficial SF Study Group (despite the fact that I was based in a timezone 16 hours ahead), and the beginners study group led by Wayde Gilliam (@wgpubs) every Thursday.&lt;/p&gt;
+
+&lt;p&gt;More importantly, the Unofficial Study Group resolved to continue meeting even after the end of the live lectures last May 6 to further encourage its members to keep pursuing their learning.&lt;/p&gt;
+
+&lt;p&gt;It has since evolved into 3 related activities:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A biweekly meeting for presenting projects such as kaggle competitions, and blog posts or software projects&lt;/li&gt;
+  &lt;li&gt;A weekly book rereading where participants set aside a 3 hour block of time to read a fastbook chapter followed by 30 minute discussion&lt;/li&gt;
+  &lt;li&gt;An accountability mini-group where we meet weekly to discuss our weekly learning goals and encourage accountability for those goals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;lessons-learned&quot;&gt;Lessons learned&lt;/h3&gt;
+
+&lt;p&gt;For me, these activities have not only been effective in keeping my interest in the course (aside from participating in the forum discussions) but have also helped relieve the isolation brought on by the COVID-19 pandemic quarantine.&lt;/p&gt;
+
+&lt;p&gt;Aside from these, the fastai community has (especially during the live lectures) also provided additional activities – I would highlight the videos and meetings on the fastai source code review as well as other videos by Zach Mueller.&lt;/p&gt;
+
+&lt;p&gt;These resources have all helped enrich my learning experience, but I think the social experience given by an online study group was the most effective addition to make my fastai learning experience more effective.&lt;/p&gt;
+
+&lt;h3 id=&quot;suggestions-for-improvement&quot;&gt;Suggestions for Improvement&lt;/h3&gt;
+
+&lt;p&gt;Having had a long experience with conducting trainings on software development, I have always thought about how to make the online fastai learning experience more effective not only for myself but for others like me.&lt;/p&gt;
+
+&lt;p&gt;I totally support fastai’s goal of democratizing AI and Deep Learning and making it more accessible.&lt;/p&gt;
+
+&lt;p&gt;An important part of this effort is making it more accessible outside of the US, in less developed countries like Asia and Africa (which is why making the lecture transcripts and captions available in other languages is also important).&lt;/p&gt;
+
+&lt;p&gt;Also important is making the community more diverse and inclusive, especially in encouraging people from different backgrounds to join the community, making them feel welcome and helping them achieve success in learning deep learning so they can apply it to their domains and societies.&lt;/p&gt;
+
+&lt;p&gt;I think one area where the fastai support is especially lacking is helping those learners who may not have a programming background.&lt;/p&gt;
+
+&lt;p&gt;While the fastai’s “whole game” approach and goals encourages people who may not have a strong programming background to learn deep learning and apply it to their own fields, I think we can provide better ways to support them and get over the initial hump of learning the python basics (plus other software development related stuff like git, using the bash command line, etc.).&lt;/p&gt;
+
+&lt;p&gt;I think this is quite possible for the fastai community to achieve – given that the majority of its members, I believe, do have programming chops to teach the other learners who might be having difficulty in that area.&lt;/p&gt;
+
+&lt;p&gt;For these reasons, and based on my experiences, I have come to propose the &lt;strong&gt;FastAI Deep Learning Adventure Guides&lt;/strong&gt; as an initiative to help make the online fastai learning experience more effective.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;to be continued to &lt;strong&gt;Part 2 – Components and Roadmap&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">FastAI Deep Learning Adventure Guides (Part 1 - Rationale)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://butchland.github.io/butchland-machine-learning-notes/images/dora-map-explorer.png" /><media:content medium="image" url="https://butchland.github.io/butchland-machine-learning-notes/images/dora-map-explorer.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fastbook Chapter 8 Questionnaire Answers</title><link href="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html" rel="alternate" type="text/html" title="Fastbook Chapter 8 Questionnaire Answers" /><published>2020-06-24T00:00:00-05:00</published><updated>2020-06-24T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/06/24/fast-ai-chapter-8-collab-filter-deep-dive-questionnaire-answers.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
