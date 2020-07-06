@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Fast.ai Deep Learning Adventure Guides (Part 2) | Butch Landingin’s Machine Learning Notes</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Fast.ai Deep Learning Adventure Guides (Part 2)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A proposal for making the fast.ai deep learning course more effective" />
+<meta property="og:description" content="A proposal for making the fast.ai deep learning course more effective" />
+<link rel="canonical" href="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/07/06/fastai-deeplearning-adventure-guides-part2.html" />
+<meta property="og:url" content="https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/07/06/fastai-deeplearning-adventure-guides-part2.html" />
+<meta property="og:site_name" content="Butch Landingin’s Machine Learning Notes" />
+<meta property="og:image" content="https://butchland.github.io/butchland-machine-learning-notes/images/dora-map-explorer.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-06T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"A proposal for making the fast.ai deep learning course more effective","@type":"BlogPosting","headline":"Fast.ai Deep Learning Adventure Guides (Part 2)","dateModified":"2020-07-06T00:00:00-05:00","datePublished":"2020-07-06T00:00:00-05:00","image":"https://butchland.github.io/butchland-machine-learning-notes/images/dora-map-explorer.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/07/06/fastai-deeplearning-adventure-guides-part2.html"},"url":"https://butchland.github.io/butchland-machine-learning-notes/fastai/2020/07/06/fastai-deeplearning-adventure-guides-part2.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/butchland-machine-learning-notes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" /><link rel="shortcut icon" type="image/x-icon" href="/butchland-machine-learning-notes/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/about/">About</a><a class="page-link" href="/butchland-machine-learning-notes/search/">Search</a><a class="page-link" href="/butchland-machine-learning-notes/categories/">Tags</a></div>
+      </nav><a class="site-title" rel="author" href="/butchland-machine-learning-notes/">Butch Landingin&#39;s Machine Learning Notes</a>
+
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Fast.ai Deep Learning Adventure Guides (Part 2)</h1><p class="page-description">A proposal for making the fast.ai deep learning course more effective</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-07-06T00:00:00-05:00" itemprop="datePublished">
+        Jul 6, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/butchland-machine-learning-notes/categories/#fastai">fastai</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><div class="show_toc_section"><button id="show_toc">Show TOC</button></div><ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#fastai-deep-learning-adventure-guides-part-2">Fast.ai Deep Learning Adventure Guides (Part 2)</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#summary">Summary</a></li>
+<li class="toc-entry toc-h2"><a href="#vision">Vision</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#user-personas">User Personas</a></li>
+<li class="toc-entry toc-h3"><a href="#pre-implementation-scenarios">Pre-implementation Scenarios</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#hues-setup-issues">Hue’s setup issues</a></li>
+<li class="toc-entry toc-h4"><a href="#nadjas-customized-workflow-applications">Nadja’s customized workflow applications</a></li>
+<li class="toc-entry toc-h4"><a href="#sonias-schedule">Sonia’s schedule</a></li>
+<li class="toc-entry toc-h4"><a href="#nikolais-networking-goals">Nikolai’s networking goals</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#a-vision-for-the-fastai-deep-learning-adventure-guides">A vision for the Fastai deep learning adventure guides</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#a-deep-learning-expedition">A Deep learning expedition</a></li>
+<li class="toc-entry toc-h4"><a href="#sample-program-schedule">Sample Program Schedule</a></li>
+<li class="toc-entry toc-h4"><a href="#sample-schedules">Sample Schedules</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#additional-activities">Additional Activities</a></li>
+<li class="toc-entry toc-h3"><a href="#motivations-for-the-adaventure-guides">Motivations for the Adaventure Guides</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><p><img src="/butchland-machine-learning-notes/images/dora-map-explorer.png" alt="dora explorer map" title="Dora the Explorer Map - credits to https://www.mobygames.com/game/windows/dora-the-explorer-swipers-big-adventure/screenshots"></p>
+<h1 id="fastai-deep-learning-adventure-guides-part-2">
+<a class="anchor" href="#fastai-deep-learning-adventure-guides-part-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fast.ai Deep Learning Adventure Guides (Part 2)</h1>
+
+<h2 id="summary">
+<a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
+<p><strong>FastAI Deep Learning Adventure Guides</strong> is an initiative to provide first-time fastai learners with a more formalized, structured study group, with a fixed schedule, led by more experienced fastai community members on a volunteer basis, to make the online course (MOOC version) more engaging and effective specially for non-programmers.</p>
+
+<p><a href="/butchland-machine-learning-notes/fastai/2020/06/28/fastai-deeplearning-adventure-guides.html">Part 1</a> covers the rationale. Part 2  covers the program’s vision and use cases.</p>
+
+<h2 id="vision">
+<a class="anchor" href="#vision" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vision</h2>
+
+<p>In order to give a better picture of how the program can be implemented, we created user personas to provide a more personal, relatable picture of the program’s use cases.</p>
+
+<h3 id="user-personas">
+<a class="anchor" href="#user-personas" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Personas</h3>
+
+<ul>
+  <li>
+<strong>Hue</strong> is a dermatologist from Vietnam who wants to develop telemedicine diagnostic mobile apps.</li>
+  <li>
+<strong>Nadja</strong> is an agriculturist who is working with rice farmers from Bangladesh. She is hoping to combine satellite and drone images with agricultural field reports and weather forecasts to improve crop yield estimates.</li>
+  <li>
+<strong>Sonia</strong> is a health informatics expert who is hoping to use data from her country’s health insurance filings improve public health policy.</li>
+  <li>
+<strong>Nikolai</strong> is a journalist studying his country’s social media growth patterns and how it has influenced governmental policies.</li>
+</ul>
+
+<p>They are all hoping to add deeplearning to their toolkits and want to learn how to apply it to their domains.</p>
+
+<h3 id="pre-implementation-scenarios">
+<a class="anchor" href="#pre-implementation-scenarios" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pre-implementation Scenarios</h3>
+
+<h4 id="hues-setup-issues">
+<a class="anchor" href="#hues-setup-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hue’s setup issues</h4>
+<ul>
+  <li>Hue has just learned about the fastai MOOC from her twitter feed and is interested in taking the course. She doesn’t have a programming background and is a little intimidated by the topic.
+She is however very determined and is hopeful after watching the first lecture that she can apply deeplearning to help her in diagnosing skin diseases.</li>
+  <li>She plans to work with some mobile devs who may not have the deeplearning skillsets, but she plans to develop the diagnostic deeplearning models herself (since she knows how to diagnose dermatological problems from images) and serve the models via an API.</li>
+  <li>After having some problems setting up her jupyter notebook environment, she joined the forums and asked for help. While there were some responses to her questions, it took her several days to resolve them, primarily due to timezone differences.</li>
+  <li>She also felt a little lost with some of the advice, as in most of them assumed a deeper computer technical background than what she had.</li>
+  <li>She felt she could have resolved her issues a lot quicker, had their been some hands-on assistance.</li>
+  <li>She is also looking for assistance in learning Python so she can better handle the course material.</li>
+</ul>
+
+<h4 id="nadjas-customized-workflow-applications">
+<a class="anchor" href="#nadjas-customized-workflow-applications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nadja’s customized workflow applications</h4>
+<ul>
+  <li>Nadja also heard about the fastai MOOC from a colleague. Although her work already involves analyzing satellite images and weather forecasts separately, she’s interested in a customized workflow that integrates all those data sources into deep learning models so they can scale up personalized predictions and insights for the farmer’s crop yields.</li>
+  <li>Although her office employs data scientists, none of them have a lot of experience with deep learning and she’s reluctant to bother them for assistance.</li>
+  <li>She uses the forums as much as she can, but wishes for a more person-to-person interaction even if only an online one, since her goal of combining images with weather forecasts is not a common thing being done in her field.</li>
+</ul>
+
+<h4 id="sonias-schedule">
+<a class="anchor" href="#sonias-schedule" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sonia’s schedule</h4>
+<ul>
+  <li>Sonia is hoping to add deeplearning to her data science skills. She has been using Python in her other projects, and is interested in building a recommendation system for local goverment units based on public health data from health insurance claims of their constituents to hopefully improve public health outcomes.</li>
+  <li>She started watching the videos and participating in the forums. She is eager to learn new skills, but also realizes her intended project is quite ambitious and instead is working on smaller, simpler projects.</li>
+  <li>Her problem is sustaining her interest and momentum. While she welcomes the fact that the MOOC allows her to learn on her own pace, she also knows that  a regular schedule with defined weekly objectives can help her maintain a consistent pace to her advancement in deep learning.</li>
+</ul>
+
+<h4 id="nikolais-networking-goals">
+<a class="anchor" href="#nikolais-networking-goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nikolai’s networking goals</h4>
+<ul>
+  <li>Nikolai is a data journalist and is familiar with Tableau and a smattering of R, but not python. He intends to learn deep learning especially NLP techniques, in order to apply them to preprocessing text from social media sources to be used for analysis later.</li>
+  <li>Nikolai has been watching the videos and participating in the forums, but is also hoping for more social interaction with the community members.</li>
+  <li>While he’s trying to gain as much understanding of deep learning as he can, he is also hoping he can build connections from his country’s local fastai community and leverage their diverse talents to focus on problems he’s interested in.</li>
+</ul>
+
+<h3 id="a-vision-for-the-fastai-deep-learning-adventure-guides">
+<a class="anchor" href="#a-vision-for-the-fastai-deep-learning-adventure-guides" aria-hidden="true"><span class="octicon octicon-link"></span></a>A vision for the Fastai deep learning adventure guides</h3>
+
+<p>The goal of the Fastai deep learning adventure guide program is to help learners of the fastai MOOC become more effective. A following idealized scenario gives us a glimpse of how the initiative can address the issues discussed above.</p>
+
+<h4 id="a-deep-learning-expedition">
+<a class="anchor" href="#a-deep-learning-expedition" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Deep learning expedition</h4>
+
+<ul>
+  <li>Hue finds out about the Fastai DL Adventure guides.  She looks for and finds a program starting in about a week with a schedule geared for her timezone.</li>
+  <li>She signs up and attends an online orientation via a Zoom call. This particular Adventure program is run by Zach, a long time fastai volunteer. She’s also happy to find that Nadja, a fellow school alumni, has also signed up for the same group.</li>
+  <li>As part of the program requirements, they sign an a fastai DL Adventure member’s agreement that asks for their commitment to adhere to the community’s values of inclusion and respect for each member as well as to try to commit to completing the program. They also commit to helping out other participants and contribute to the community in the future.</li>
+  <li>The orientation also included introductions as well as some online social games to break the ice among the group members.</li>
+  <li>She and her fellow expedition members (all 7 of them) are given a proposed schedule by Zach, their Adventure guide. They discuss it and modify it based on their personal schedules (A sample schedule is provided below).</li>
+  <li>Based on her schedule, she requested if she could skip the group video watching activities, but promised to join the discussion after (She planned to watch the videos on her daily commute instead)</li>
+  <li>She’s also thinking of teaming up with her fellow group member Sonia as well as her friend Nadja for the first group project, since Sonia has some programming skills, which she and Nadja did not. Besides, they seemed to have bonded quite well during the orientation.</li>
+  <li>She’s also thinking of turning her proposed team into an accountability group, a recommendation from their Adventure guide. By making herself accountable to an external group, she hopes to become more consistent in completing the study group activities and make her deep learning study habits stick.</li>
+</ul>
+
+<h4 id="sample-program-schedule">
+<a class="anchor" href="#sample-program-schedule" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Program Schedule</h4>
+
+<ul>
+  <li>Base Camp (Orientation)</li>
+  <li>Station 1 (Intro)
+    <ul>
+      <li>video watch Lecture 1 + Q&amp;A discussion after</li>
+      <li>study group discussion
+        <ul>
+          <li>workshop activity: setup jupyter notebook environment</li>
+        </ul>
+      </li>
+      <li>book reading activity (Chapter 1) + Questionnaire roundtable discussion</li>
+      <li>run notebook 1 + troubleshooting session</li>
+    </ul>
+  </li>
+  <li>Station 2 (Production)
+    <ul>
+      <li>video watch Lecture 2 + Q&amp;A discussion after</li>
+      <li>study group discussion
+        <ul>
+          <li>workshop activity: setup Azure search keys + run binder</li>
+        </ul>
+      </li>
+      <li>book reading activity (Chapter 2) + Questionnaire roundtable discussion</li>
+      <li>run notebook 2 + troubleshooting session</li>
+    </ul>
+  </li>
+  <li>Station 3 (MNIST)
+    <ul>
+      <li>video watch Lecture 3 + Q&amp;A discussion after</li>
+      <li>study group discussion</li>
+      <li>book reading activity (Chapter 4) + Questionnaire roundtable discussion</li>
+      <li>run notebook 4 + troubleshooting session
+        <ul>
+          <li>workshop activity: build a nn model from scratch</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Station 4 (Pets)
+    <ul>
+      <li>video watch Lecture 4 + Q&amp;A discussion after</li>
+      <li>study group discussion
+        <ul>
+          <li>workshop activity: exercises using Datablocks</li>
+        </ul>
+      </li>
+      <li>book reading activity (Chapter 5) + Questionnaire roundtable discussion</li>
+      <li>run notebook 5 + troubleshooting session</li>
+    </ul>
+  </li>
+  <li>Station 5 (Ethics)
+    <ul>
+      <li>video watch Lecture 5 + Q&amp;A discussion after</li>
+      <li>study group discussion</li>
+      <li>book reading activity (Chapter 3) + Questionnaire roundtable discussion</li>
+    </ul>
+  </li>
+  <li>Station 6 (Multicat)
+    <ul>
+      <li>video watch Lecture 6 + Q&amp;A discussion after</li>
+      <li>study group discussion
+        <ul>
+          <li>workshop activity: redo pets and mnist using multicat</li>
+        </ul>
+      </li>
+      <li>book reading activity (Chapter 6) + Questionnaire roundtable discussion</li>
+      <li>run notebook 6 + troubleshooting session</li>
+    </ul>
+  </li>
+  <li>Station 7 (Collab and Tabular)
+    <ul>
+      <li>video watch Lecture 7 + Q&amp;A discussion after</li>
+      <li>study group discussion</li>
+      <li>book reading activity (Chapter 8) + Questionnaire roundtable discussion</li>
+      <li>run notebook 8 + troubleshooting session</li>
+      <li>
+        <p>book reading activity (Chapter 9) + Questionnaire roundtable discussion</p>
+      </li>
+      <li>run notebook 9 + troubleshooting session</li>
+    </ul>
+  </li>
+  <li>Station 8 (NLP)
+    <ul>
+      <li>video watch Lecture 8 + Q&amp;A discussion after</li>
+      <li>study group discussion</li>
+      <li>book reading activity (Chapter 10) + Questionnaire roundtable discussion</li>
+      <li>run notebook 10  + troubleshooting session</li>
+      <li>book reading activity (Chapter 12) + Questionnaire roundtable discussion</li>
+      <li>run notebook 12  + troubleshooting session</li>
+    </ul>
+  </li>
+  <li>Summit (Group Project)
+    <ul>
+      <li>group presentations</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="sample-schedules">
+<a class="anchor" href="#sample-schedules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Schedules</h4>
+
+<ul>
+  <li>video lecture watching - Tuesdays 6-8pm every 2 or 3  weeks</li>
+  <li>video lecture Q&amp;A discussion - 8-9pm Tuesdays following video watching</li>
+  <li>video lecture study group Q&amp;A - Thursdays 6-8pm every 2 weeks</li>
+  <li>book reading chapter - Tuesdays 6-9pm  after video lecture watching</li>
+  <li>book chapter questionnaire Q&amp;A - following book reading</li>
+  <li>run notebooks and troubleshooting - Thursdays 6-8 after book reading</li>
+  <li>group projects - presentations scheduled 2 weeks after last book reading.</li>
+</ul>
+
+<h3 id="additional-activities">
+<a class="anchor" href="#additional-activities" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Activities</h3>
+
+<p>In addition to programmed study groups centered on the fastai lectures,
+additional related topics may also be covered (depending on the students’ learning needs), such as:</p>
+<ul>
+  <li>Python programming</li>
+  <li>git</li>
+  <li>pandas</li>
+  <li>scikit-learn</li>
+</ul>
+
+<p>Moreover, participants can also undertake individual mini-projects. The adventure Guides also curate and provide pointers to new members on what mini-projects they can undertake to level up their deep learning skills given their current skill level.</p>
+
+<p>As envisioned, these activities can help fastai MOOC course increase the number of learners who go on to finish the course and more effective in achieving its goals.</p>
+
+<h3 id="motivations-for-the-adaventure-guides">
+<a class="anchor" href="#motivations-for-the-adaventure-guides" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivations for the Adaventure Guides</h3>
+
+<p>So aside from altruistic motives, why would an Adventure guide volunteer?</p>
+
+<p>The primary reason, I believe, is because of the truism that the best way to learn a topic is by teaching it. It will help the Adventure guide gain a deeper understanding of deep learning, as well as cementing the foundations into their knowledge base.</p>
+
+<p>Another reason can be providing social interaction in a supportive environment is a reward in itself.</p>
+
+<p>Lastly, the ability to teach Deep Learning is a valuable skill in of itself, and may lead to professional opportunities later.</p>
+
+<p>Leading an adventure group provides valuable experience to develop these skills, as well as exposing the guide to a diverse set of domains where deep learning can be applicable.</p>
+
+<p>Further incentives (such as certification, or reviews) maybe added in the future, based on feedback. (<em>My personal view is that financial remuneration is not an option, since we are trying to keep the course, including the Adventure Guide program, totally free – but I’m open to discussion about this concern</em>)</p>
+<script >
+      var toc_button = document.getElementById('show_toc');
+      var toc_nav = document.getElementsByClassName('section-nav')[0];
+      toc_nav.style.display = 'none'; // hide on initial display
+      var toggle_toc = function(e){
+        if (toc_button.innerText === 'Hide TOC') {
+          toc_button.innerHTML = 'Show TOC';
+          toc_nav.style.display = 'none';
+        } else {
+          toc_button.innerHTML = 'Hide TOC';
+          toc_nav.style.display = 'block';
+        }
+        // e.target.preventDefault();
+        return false;
+      }; 
+      toc_button.addEventListener('click', toggle_toc);    
+    </script></div><a class="u-url" href="/butchland-machine-learning-notes/fastai/2020/07/06/fastai-deeplearning-adventure-guides-part2.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/butchland-machine-learning-notes/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/butchland-machine-learning-notes/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My explorations in machine learning</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
