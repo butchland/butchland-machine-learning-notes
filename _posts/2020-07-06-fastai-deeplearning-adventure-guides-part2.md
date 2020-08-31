@@ -25,14 +25,14 @@ In order to give a better picture of how the program can be implemented, we crea
 * **Sonia** is a health informatics expert who is hoping to use data from her country's health insurance filings improve public health policy.
 * **Nikolai** is a journalist studying his country's social media growth patterns and how it has influenced governmental policies.
 
-They are all hoping to add deeplearning to their toolkits and want to learn how to apply it to their domains. 
+They are all hoping to add deep learning to their toolkits and want to learn how to apply it to their domains. 
 
 ### Pre-implementation Scenarios
 
 #### Hue's setup issues
 * Hue has just learned about the fastai MOOC from her twitter feed and is interested in taking the course. She doesn't have a programming background and is a little intimidated by the topic.
-She is however very determined and is hopeful after watching the first lecture that she can apply deeplearning to help her in diagnosing skin diseases.
-* She plans to work with some mobile devs who may not have the deeplearning skillsets, but she plans to develop the diagnostic deeplearning models herself (since she knows how to diagnose dermatological problems from images) and serve the models via an API. 
+She is however very determined and is hopeful after watching the first lecture that she can apply deep learning to help her in diagnosing skin diseases.
+* She plans to work with some mobile devs who may not have the deep learning skillsets, but she plans to develop the diagnostic deep learning models herself (since she knows how to diagnose dermatological problems from images) and serve the models via an API. 
 * After having some problems setting up her jupyter notebook environment, she joined the forums and asked for help. While there were some responses to her questions, it took her several days to resolve them, primarily due to timezone differences.
 * She also felt a little lost with some of the advice, as in most of them assumed a deeper computer technical background than what she had.
 * She felt she could have resolved her issues a lot quicker, had their been some hands-on assistance. 
@@ -44,7 +44,7 @@ She is however very determined and is hopeful after watching the first lecture t
 * She uses the forums as much as she can, but wishes for a more person-to-person interaction even if only an online one, since her goal of combining images with weather forecasts is not a common thing being done in her field.
 
 #### Sonia's schedule
-* Sonia is hoping to add deeplearning to her data science skills. She has been using Python in her other projects, and is interested in building a recommendation system for local goverment units based on public health data from health insurance claims of their constituents to hopefully improve public health outcomes.
+* Sonia is hoping to add deep learning to her data science skills. She has been using Python in her other projects, and is interested in building a recommendation system for local goverment units based on public health data from health insurance claims of their constituents to hopefully improve public health outcomes.
 * She started watching the videos and participating in the forums. She is eager to learn new skills, but also realizes her intended project is quite ambitious and instead is working on smaller, simpler projects.
 * Her problem is sustaining her interest and momentum. While she welcomes the fact that the MOOC allows her to learn on her own pace, she also knows that  a regular schedule with defined weekly objectives can help her maintain a consistent pace to her advancement in deep learning.
 
@@ -61,11 +61,12 @@ The goal of the Fastai deep learning adventure guide program is to help learners
 
 * Hue finds out about the Fastai DL Adventure guides.  She looks for and finds a program starting in about a week with a schedule geared for her timezone.
 * She signs up and attends an online orientation via a Zoom call. This particular Adventure program is run by Zach, a long time fastai volunteer. She's also happy to find that Nadja, a fellow school alumni, has also signed up for the same group. 
-* As part of the program requirements, they sign an a fastai DL Adventure member's agreement that asks for their commitment to adhere to the community's values of inclusion and respect for each member as well as to try to commit to completing the program. They also commit to helping out other participants and contribute to the community in the future.
+* As part of the program requirements, they sign an a fastai DL Adventure Expedition  member's agreement that asks for their commitment to adhere to the community's values of inclusion and respect for each member as well as to try to commit to completing the program. They also commit to helping out other participants and contribute to the community in the future.
 * The orientation also included introductions as well as some online social games to break the ice among the group members.
 * She and her fellow expedition members (all 7 of them) are given a proposed schedule by Zach, their Adventure guide. They discuss it and modify it based on their personal schedules (A sample schedule is provided below).
 * Based on her schedule, she requested if she could skip the group video watching activities, but promised to join the discussion after (She planned to watch the videos on her daily commute instead) 
-* She's also thinking of teaming up with her fellow group member Sonia as well as her friend Nadja for the first group project, since Sonia has some programming skills, which she and Nadja did not. Besides, they seemed to have bonded quite well during the orientation.
+* As part of her mini-projects, she's signed up to pair with Nikolai, who seems interested in NLP, to recreate a twitter sentiment analysis notebook. While she doesn't plan on using NLP in her project, she's also keen to round out her knowledge of deep learning to include areas other than where she plans to specialize in.
+* She's also thinking of teaming up with her fellow group member Sonia as well as her friend Nadja for their final group project, since Sonia has some programming skills, which she and Nadja did not. Besides, they seemed to have bonded quite well during the orientation.
 * She's also thinking of turning her proposed team into an accountability group, a recommendation from their Adventure guide. By making herself accountable to an external group, she hopes to become more consistent in completing the study group activities and make her deep learning study habits stick.
 
 #### Sample Program Schedule
@@ -148,7 +149,7 @@ Moreover, participants can also undertake individual mini-projects. The adventur
 
 As envisioned, these activities can help fastai MOOC course increase the number of learners who go on to finish the course and more effective in achieving its goals.
 
-### Motivations for the Adaventure Guides
+### Motivations for the Adventure Guides
 
 So aside from altruistic motives, why would an Adventure guide volunteer?
 
@@ -160,4 +161,4 @@ Lastly, the ability to teach Deep Learning is a valuable skill in of itself, and
 
 Leading an adventure group provides valuable experience to develop these skills, as well as exposing the guide to a diverse set of domains where deep learning can be applicable.
 
-Further incentives (such as certification, or reviews) maybe added in the future, based on feedback. (_My personal view is that financial remuneration is not an option, since we are trying to keep the course, including the Adventure Guide program, totally free -- but I'm open to discussion about this concern_)
+Further incentives (such as certification, reviews, or financial remuneration) maybe added in the future, based on feedback. 
