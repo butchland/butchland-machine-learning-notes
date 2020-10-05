@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive (Part 2) | Butch Landingin’s Machine Learning Notes</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive (Part 2)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A beginning beginner’s step by step guide to creating cool image classifiers for deep learning newbies (like you, me, and the rest of us)" />
+<meta property="og:description" content="A beginning beginner’s step by step guide to creating cool image classifiers for deep learning newbies (like you, me, and the rest of us)" />
+<link rel="canonical" href="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html" />
+<meta property="og:url" content="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html" />
+<meta property="og:site_name" content="Butch Landingin’s Machine Learning Notes" />
+<meta property="og:image" content="https://butchland.github.io/butchland-machine-learning-notes/images/image-classifier-logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-05T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"A beginning beginner’s step by step guide to creating cool image classifiers for deep learning newbies (like you, me, and the rest of us)","@type":"BlogPosting","url":"https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html","dateModified":"2020-10-05T00:00:00-05:00","datePublished":"2020-10-05T00:00:00-05:00","headline":"Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive (Part 2)","image":"https://butchland.github.io/butchland-machine-learning-notes/images/image-classifier-logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/butchland-machine-learning-notes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" /><link rel="shortcut icon" type="image/x-icon" href="/butchland-machine-learning-notes/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/about/">About</a><a class="page-link" href="/butchland-machine-learning-notes/search/">Search</a><a class="page-link" href="/butchland-machine-learning-notes/categories/">Tags</a></div>
+      </nav><a class="site-title" rel="author" href="/butchland-machine-learning-notes/">Butch Landingin&#39;s Machine Learning Notes</a>
+
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive (Part 2)</h1><p class="page-description">A beginning beginner&#39;s step by step guide to creating cool image classifiers for deep learning newbies (like you, me, and the rest of us)</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-10-05T00:00:00-05:00" itemprop="datePublished">
+        Oct 5, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/butchland-machine-learning-notes/categories/#machine learning">machine learning</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><div class="show_toc_section"><button id="show_toc">Show TOC</button></div><ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#building-your-own-image-classifier-is-fun">Building your own image classifier is fun!</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#sharing-your-app-to-the-world">Sharing your app to the world</a></li>
+<li class="toc-entry toc-h2"><a href="#create-a-github-repo">Create a Github Repo</a></li>
+<li class="toc-entry toc-h2"><a href="#upload-your-exported-image-classifier-file-to-github">Upload your exported image classifier file to Github</a></li>
+<li class="toc-entry toc-h2"><a href="#run-your-app-on-binder">Run your app on Binder</a></li>
+<li class="toc-entry toc-h2"><a href="#copy-and-share-your-binder-app-link">Copy and Share your Binder App Link</a></li>
+<li class="toc-entry toc-h2"><a href="#profit">Profit!!</a></li>
+<li class="toc-entry toc-h2"><a href="#what-we-learned">What we learned</a></li>
+<li class="toc-entry toc-h2"><a href="#want-to-learn-more">Want to learn more?</a></li>
+<li class="toc-entry toc-h2"><a href="#final-note-and-acknowledgements">Final Note and Acknowledgements</a></li>
+</ul>
+</li>
+</ul><p><img src="https://imgs.xkcd.com/comics/trained_a_neural_net.png" alt="trained a neural net"></p>
+
+<h1 id="building-your-own-image-classifier-is-fun">
+<a class="anchor" href="#building-your-own-image-classifier-is-fun" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building your own image classifier is fun!</h1>
+
+<p><em>This is Part 2 of a two-part article on building your own image classifier.</em></p>
+
+<p>If you haven’t read the Part 1 yet, please read it first as this second part continues where the Part 1 left off.</p>
+
+<p>Here’s the <a href="/butchland-machine-learning-notes/machine%20learning/2020/09/21/byoic-on-colab.html" target="_blank">link to Part 1</a>.</p>
+
+<h2 id="sharing-your-app-to-the-world">
+<a class="anchor" href="#sharing-your-app-to-the-world" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sharing your app to the world</h2>
+
+<p>In order to share it to the world, we will be using <a href="https://mybinder.org" target="_blank">Binder</a> , another cloud based service that can run Jupyter notebooks as applications (much like Colab can also run Jupyter notebooks).</p>
+
+<p>The difference is that Colab is an interactive editor environment (allowing you to edit and run your Jupyter notebooks) while Binder is just for running your Jupyter notebooks as applications.</p>
+
+<h2 id="create-a-github-repo">
+<a class="anchor" href="#create-a-github-repo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a Github Repo</h2>
+
+<p>In order to run your Jupyter notebook on Binder, we will need to create a Github repository (also known as a <em>repo</em>), which is a place to store the associated files necessary to run your app.</p>
+
+<p>This includes the exported image classifier named <code class="highlighter-rouge">export.pkl</code> file which we built earlier.</p>
+
+<p>If you haven’t done so earlier, you’ll need to create a Github ID, which grants you access to the Github site and allows you to create your own repos.</p>
+
+<p>Click on <a href="https://github.com/join?source=header-home" target="_blank">the link here</a> to create a Github ID.</p>
+
+<p>Once you’ve created a Github ID, you can now create repos on Github.</p>
+
+<p>Click on <a href="https://github.com/butchland/build-your-own-image-classifier-template/generate" target="_blank">this link here</a> to generate your repo.</p>
+
+<p><em>(Make sure to change the name of project to something that is <strong>NOT</strong> the same name as original name <code class="highlighter-rouge">build-your-own-image-classifier-template</code>)</em>.</p>
+
+<p>This is to work around a limitation of Github regarding public forks. Naming your project <code class="highlighter-rouge">build-your-own-image-classifier</code> (without the <code class="highlighter-rouge">-template</code>) is fine, but naming your project to something unique for yourself would be better.</p>
+
+<p>Please note down the name of your Github ID, your Github password as well as the name of your repository (or <em>repo</em> for short) as you will use them in the next steps below.</p>
+
+<h2 id="upload-your-exported-image-classifier-file-to-github">
+<a class="anchor" href="#upload-your-exported-image-classifier-file-to-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload your exported image classifier file to Github</h2>
+
+<p>Once you’ve created your Github repo, you are now ready to <em>“push”</em> or copy the exported image classifier from your Google Drive to your Github repo.</p>
+
+<p><em>(If you’re wondering why can’t we just download the exported image classifier from Colab and upload it to your Github repo – it’s because of a limitation of Github which restricts uploads of files bigger than 25MB. Unfortunately, your exported image classifier file (<code class="highlighter-rouge">export.pkl</code>) is usually bigger than this so we have to use <code class="highlighter-rouge">git</code>  - a version control system used by Github, to move the exported image classifier from Colab to our Github repo)</em></p>
+
+<p>Click on the button below to run another notebook on Colab which will do this.</p>
+
+<p>Fill out your github repo, github id and password as explained in the notebook.</p>
+
+<p><a href="https://colab.research.google.com/github/butchland/build-your-own-image-classifier/blob/master/colab-export-image-classifier.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+
+<p>Once you have done this, your exported image classifier should now be visible in the list of files of your Github repo.</p>
+
+<p>Your Github repo URL should have the format <code class="highlighter-rouge">https://github.com/&lt;your-github-id&gt;/&lt;your-github-repo-name&gt;</code>.</p>
+
+<p><img src="https://raw.githubusercontent.com/butchland/build-your-own-image-classifier/master/images/add-export-pkl-to-repo.png" alt="check export.pkl in list of repo files image"></p>
+
+<p>Please check that the <code class="highlighter-rouge">export.pkl</code> file is in the list of files of your repo.</p>
+
+<p><em>(If it’s not there, then something went awry with the previous step – maybe your github id, github repo or password were entered incorrectly. You might need to rerun the previous step above.)</em></p>
+
+<h2 id="run-your-app-on-binder">
+<a class="anchor" href="#run-your-app-on-binder" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run your app on Binder</h2>
+
+<p>In order to run Binder, please take note of url of the Github repo you created in the previous step.</p>
+
+<p>Next, head over to Binder by <a href="https://mybinder.org" target="_blank">clicking here</a>.</p>
+
+<p>Configure Binder as shown below.</p>
+
+<p><img src="https://raw.githubusercontent.com/butchland/build-your-own-image-classifier/master/images/binder-launch-screen.png" alt="binder main page"></p>
+
+<p>In the <code class="highlighter-rouge">GitHub repository name or URL</code> field (marked with the text 1), paste the url of your Github repo.</p>
+
+<p>In the <code class="highlighter-rouge">Path to a notebook file (optional)</code> field (marked with the text 2), enter <code class="highlighter-rouge">/voila/render/build-your-own-image-classifier.ipynb</code>.</p>
+
+<p>Change the <code class="highlighter-rouge">path type</code> (marked with the text 4 right next to the <code class="highlighter-rouge">Path to a notebook file (optional)</code> field) from <code class="highlighter-rouge">File</code> to <code class="highlighter-rouge">URL</code>.<em>(This will change the label of the previous field to <code class="highlighter-rouge">URL to open (optional)</code>)</em></p>
+
+<p>Make sure to fill out the three fields correctly.</p>
+
+<p>Once done, click on Orange-Yellow “Launch” button (located right next to the <code class="highlighter-rouge">URL to open (optional)</code> field) and you are all set.</p>
+
+<p><em>(Note that starting your application the first time will be slow, as Binder must first assemble your application into a ready-to-run format. The next time your application starts, it will start up a little bit quicker.)</em></p>
+
+<p>Note down the Share URL to your app (marked with text 3 in the above image) so you can share it with your friends and family to explore.</p>
+
+<h2 id="copy-and-share-your-binder-app-link">
+<a class="anchor" href="#copy-and-share-your-binder-app-link" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copy and Share your Binder App Link</h2>
+
+<p>When you run your app on binder, Binder provides a link to rerun your app. Save the link and share that link to your friends and family so they can run your application.</p>
+
+<h2 id="profit">
+<a class="anchor" href="#profit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Profit!!</h2>
+
+<p>If you followed the steps above, you now should have image classifier running on Binder so its time for <strong>Profit</strong>!!</p>
+
+<h2 id="what-we-learned">
+<a class="anchor" href="#what-we-learned" aria-hidden="true"><span class="octicon octicon-link"></span></a>What we learned</h2>
+
+<ul>
+  <li>
+    <p>That building image classifiers doesn’t require you to have deep pockets.</p>
+  </li>
+  <li>
+    <p>That building image classifiers doesn’t require a PhD <em>(not that having one is bad, just not required for mastering Deep Learning)</em>.</p>
+  </li>
+  <li>
+    <p>It also doesn’t require lots of math <em>(maybe some, but not a lot)</em>.</p>
+  </li>
+</ul>
+
+<h2 id="want-to-learn-more">
+<a class="anchor" href="#want-to-learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a>Want to learn more?</h2>
+
+<p>If you want to learn more (we’ve just scratched the surface), take this totally free course (no Ads!) called <a href="https://course.fast.ai" target="_blank">Practical Deep Learning for Coders</a>  – it will teach you Deep Learning from top to bottom, using running code, on Jupyter notebooks like the ones we used on Colab, and build useful applications beyond the simple image classifier we built here.</p>
+
+<p>You can also join an <a href="https://forums.fast.ai" target="_blank">inclusive global learning community</a>  that welcomes beginners and experts alike and ready to help you start your deep learning journey.</p>
+
+<p>Hope to see you there!</p>
+
+<h2 id="final-note-and-acknowledgements">
+<a class="anchor" href="#final-note-and-acknowledgements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Final Note and Acknowledgements</h2>
+
+<p>The software used to clean your data, build your classifier and run your application is largely based on the <a href="https://docs.fast.ai" target="_blank">fastai</a> python package, written by Jeremy Howard and Sylvain Gugger.</p>
+
+<p>The <a href="https://jupyter.org/" target="_blank">Jupyter Notebook</a> environment that enables us to run interactive documents to build our image classifier won the 2017 ACM Software System Award and is widely used by scientists, researchers and students around the world.</p>
+
+<p>The software package used to collect the images (<a href="https://joedockrill.github.io/jmd_imagescraper/" target="_blank">jmd_imagescraper</a>) was built by Joe Dockrill (<a href="https://forums.fast.ai/u/joedockrill" target="_blank">@joedockrill</a>), one of the students of the fast.ai course.</p>
+
+<p>The <a href="https://course.fast.ai" target="_blank">fast.ai course <strong>Practical Deep Learning for Coders</strong></a> is considered one of the best introductory courses on Deep Learning, which is taught by Jeremy Howard and Rachel Thomas, who are also the founders of <a href="https://fast.ai" target="_blank">fast.ai</a>, a non-profit organization working towards democratizing the use of AI in the world.</p>
+
+<p>There’s also a book <em>“Deep Learning for Coders with fastai and PyTorch: AI Applications Without a PhD”</em> <a href="https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527" target="_blank">available on Amazon</a>, but the authors (Sylvain and Jeremy) have made the <a href="https://github.com/fastai/fastbook" target="_blank">whole book available as Jupyter notebooks</a> for free as well.</p>
+
+<p>The steps to run on Binder were based on a <a href="https://forums.fast.ai/t/deploying-your-notebook-as-an-app-under-10-minutes/70621?u=butchland">forum post</a> created by Vikrant Behal (<a href="https://forums.fast.ai/u/vikbehal" target="_blank">@vikbehal</a>), another student of the fast.ai course.</p>
+
+<p>If you liked this article, and most specially if you were able to build your own classifier based on this article, give me a shoutout on <a href="https://twitter.com/butchland" target="_blank">my twitter account @butchland</a> or message me on the <a href="https://forums.fast.ai/u/butchland" target="_blank">fastai forums: @butchland</a>, I’d really appreciate it!</p>
+
+<hr>
+<script >
+      var toc_button = document.getElementById('show_toc');
+      var toc_nav = document.getElementsByClassName('section-nav')[0];
+      toc_nav.style.display = 'none'; // hide on initial display
+      var toggle_toc = function(e){
+        if (toc_button.innerText === 'Hide TOC') {
+          toc_button.innerHTML = 'Show TOC';
+          toc_nav.style.display = 'none';
+        } else {
+          toc_button.innerHTML = 'Hide TOC';
+          toc_nav.style.display = 'block';
+        }
+        // e.target.preventDefault();
+        return false;
+      }; 
+      toc_button.addEventListener('click', toggle_toc);    
+    </script></div><a class="u-url" href="/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/butchland-machine-learning-notes/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/butchland-machine-learning-notes/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My explorations in machine learning</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive | Butch Landingin’s Machine Learning Notes</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A beginning beginner’s step by step guide to creating cool image classifiers for deep learning newbies (like you, me, and the rest of us)" />
+<meta property="og:description" content="A beginning beginner’s step by step guide to creating cool image classifiers for deep learning newbies (like you, me, and the rest of us)" />
+<link rel="canonical" href="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/09/21/byoic-on-colab.html" />
+<meta property="og:url" content="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/09/21/byoic-on-colab.html" />
+<meta property="og:site_name" content="Butch Landingin’s Machine Learning Notes" />
+<meta property="og:image" content="https://butchland.github.io/butchland-machine-learning-notes/images/image-classifier-logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-21T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"A beginning beginner’s step by step guide to creating cool image classifiers for deep learning newbies (like you, me, and the rest of us)","@type":"BlogPosting","url":"https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/09/21/byoic-on-colab.html","dateModified":"2020-09-21T00:00:00-05:00","datePublished":"2020-09-21T00:00:00-05:00","headline":"Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive","image":"https://butchland.github.io/butchland-machine-learning-notes/images/image-classifier-logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/09/21/byoic-on-colab.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/butchland-machine-learning-notes/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" /><link rel="shortcut icon" type="image/x-icon" href="/butchland-machine-learning-notes/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" title="Butch Landingin's Machine Learning Notes" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/about/">About</a><a class="page-link" href="/butchland-machine-learning-notes/search/">Search</a><a class="page-link" href="/butchland-machine-learning-notes/categories/">Tags</a></div>
+      </nav><a class="site-title" rel="author" href="/butchland-machine-learning-notes/">Butch Landingin&#39;s Machine Learning Notes</a>
+
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive</h1><p class="page-description">A beginning beginner&#39;s step by step guide to creating cool image classifiers for deep learning newbies (like you, me, and the rest of us)</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-21T00:00:00-05:00" itemprop="datePublished">
+        Sep 21, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      8 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/butchland-machine-learning-notes/categories/#machine learning">machine learning</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody"><div class="show_toc_section"><button id="show_toc">Show TOC</button></div><ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#building-your-own-image-classifier-is-fun">Building your own image classifier is fun!</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#whats-an-image-classifier">What’s an image classifier?</a></li>
+<li class="toc-entry toc-h2"><a href="#some-prerequisites">Some prerequisites</a></li>
+<li class="toc-entry toc-h2"><a href="#steps-to-building-your-own-image-classifier">Steps to building your own image classifier</a></li>
+<li class="toc-entry toc-h2"><a href="#collecting-images">Collecting Images</a></li>
+<li class="toc-entry toc-h2"><a href="#introducing-colab">Introducing Colab</a></li>
+<li class="toc-entry toc-h2"><a href="#running-your-first-notebook-to-collect-images">Running your first notebook to collect images</a></li>
+<li class="toc-entry toc-h2"><a href="#cleaning-your-image-dataset">Cleaning your Image Dataset</a></li>
+<li class="toc-entry toc-h2"><a href="#building-a-neural-network-image-classifier">Building a Neural Network Image Classifier</a></li>
+<li class="toc-entry toc-h2"><a href="#test-your-image-classifier-app-on-colab">Test your Image Classifier App on Colab</a></li>
+<li class="toc-entry toc-h2"><a href="#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+</ul><p><img src="https://imgs.xkcd.com/comics/trained_a_neural_net.png" alt="trained a neural net"></p>
+
+<h1 id="building-your-own-image-classifier-is-fun">
+<a class="anchor" href="#building-your-own-image-classifier-is-fun" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building your own image classifier is fun!</h1>
+
+<p><em>This is Part 1 of a two-part article on building your own image classifier. Here’s the <a href="/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html" target="_blank">link to Part 2</a>.</em></p>
+
+<p>So here’s what were building – <strong>A pet classifier!</strong></p>
+
+<p>First, head over to Binder to see it in action – click on the  button below <em>(where it says “launch binder”)</em>.</p>
+
+<p><em>Play it with for a while (make sure you upload some photos). Check out how well (or how bad) it classifies your pets and come back to this page to continue.</em></p>
+
+<p><a href="https://mybinder.org/v2/gh/butchland/automatic-garbanzo/master?urlpath=%2Fvoila%2Frender%2Fbuild-your-own-image-classifier.ipynb" target="_blank"><img src="https://mybinder.org/badge_logo.svg" alt="Binder pet classifier"></a></p>
+
+<p><strong>Warning</strong>: it takes a while for it to start, so please be patient, I promise it will be worth the wait!</p>
+
+<h2 id="whats-an-image-classifier">
+<a class="anchor" href="#whats-an-image-classifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>What’s an image classifier?</h2>
+
+<p><em>I hope you clicked on the “launch binder” button above and played with the pet classifier app before coming back here to continue reading the article.</em></p>
+
+<p>If you did play around with app above <em>(like I told you to)</em>, you’d know that an <em>image classifier</em> classifies images.</p>
+
+<p>This article will show you how to build your own image classifier – by default, you’ll be building a <em>pet classifier</em> just like in the demo above, but you can tweak it so you can build an image classifier for whatever you want <em>(as long as you can find enough pictures of it to serve as examples)</em>.</p>
+
+<h2 id="some-prerequisites">
+<a class="anchor" href="#some-prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some prerequisites</h2>
+
+<p>Because we’re using cloud services to build everything in this project (no need to install anything on your computer), you’ll have to signup for some services, so you’ll need to have these.</p>
+
+<ul>
+  <li>
+    <p>A Gmail ID <em>(almost everyone has one these days, don’t they? But if you don’t, head over to <a href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&amp;flowName=GlifWebSignIn&amp;flowEntry=SignUp" target="_blank">this link here</a> right now and create one.)</em></p>
+  </li>
+  <li>
+    <p>A Github ID <em>(don’t worry if you don’t have one, we can create it later – but if you’re in a hurry, you can create one right now – just click on <a href="https://github.com/join?source=header-home" target="_blank">this link here</a>)</em></p>
+  </li>
+</ul>
+
+<h2 id="steps-to-building-your-own-image-classifier">
+<a class="anchor" href="#steps-to-building-your-own-image-classifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps to building your own image classifier</h2>
+
+<p>So now we’re ready to start building!</p>
+
+<p>Here are the steps:</p>
+
+<ul>
+  <li>
+    <p><em>Collect some pictures</em> – if you don’t have pictures, you can usually search for them over the internet.</p>
+
+    <p>We will be using <a href="https://colab.research.google.com/" target="_blank">Colab</a>, a Google cloud service used by data scientists and machine learning researchers and students around the world to build and study machine learning models.</p>
+  </li>
+  <li>
+    <p>Once you’ve collected your pictures, you’ll need to <em>clean your data</em> – you’ll see that the images you get through an internet search are sometimes incorrect, so you need to clean up your data first if you want your image classifier to work well – after all, like in a lot of things, if your image classifier gets <strong>Garbage in</strong>, it puts <strong>Garbage out</strong>)</p>
+  </li>
+  <li>
+    <p>Now that you have cleaned your data, you can build a <em>Neural Network Image Classifier</em> that can classify images.</p>
+
+    <p><em>(Neural Networks a.k.a. Deep Learning Artificial Neural Networks are currently the best way to build image classifiers – that’s why we are using them!)</em></p>
+  </li>
+  <li>
+    <p>Once you have your image classifier, you need to export it to a format so that it can be used just like a regular program – you feed it an image, it will classify that image.</p>
+  </li>
+  <li>
+    <p>We will also build a very simple app that can use that exported image classifier.</p>
+
+    <p>We can test it out on Colab, but in order to make it available for others to use, we’ll need to use a cloud platform that can run your app.</p>
+
+    <p>In our project, we will be using <a href="https://mybinder.org/" target="_blank">Binder</a>, a free cloud service that can run your image classifier.</p>
+  </li>
+  <li>
+    <p>Next, you’ll need to move that exported image classifier to <a href="https://github.com/" target="_blank">Github</a> (along with your app) because that’s where Binder will get it from in order to run it.</p>
+  </li>
+  <li>
+    <p>Once you get your exported image classifier on Github, you can now run your image classifier app on Binder.</p>
+  </li>
+  <li>
+    <p>The next step is … <strong>Profit!</strong> – as the whole world starts using your app… (or maybe just your friends :)</p>
+  </li>
+</ul>
+
+<p>Don’t worry if you haven’t figured out what to do next, I’m just outlining the steps of the whole process, but I’ll be walking you through the process step by step.</p>
+
+<p>I’ll even try to explain what we’re doing as we’re doing it, but even if you just follow the instructions (without understanding) you should just do fine (but understanding what you’re doing makes it more fun, doesn’t it?)</p>
+
+<h2 id="collecting-images">
+<a class="anchor" href="#collecting-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collecting Images</h2>
+
+<p>In order to build a Deep Learning Image Classifier, we need data.</p>
+
+<p>This data (in the form of labeled pictures) will be used as examples from which the Neural Network learns to distinguish between different categories.</p>
+
+<p>In our case, our Neural Network Image Classifier distinguishes cats from dogs.</p>
+
+<p>So we will need pictures of cats and dogs. Not only do we need pictures of cats and dogs, we will need to label each picture as containing either a cat or a dog.</p>
+
+<h2 id="introducing-colab">
+<a class="anchor" href="#introducing-colab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introducing Colab</h2>
+
+<p>As previously stated, we will be using <a href="https://colab.research.google.com/" target="_blank">Colab</a> in order to do this.</p>
+
+<p>So you might be wondering, what is Colab and how do I use it?</p>
+
+<p>Colab is an interactive document editor, much like Google Docs, but unlike Google docs, you can run code inside it.</p>
+
+<p>These Colab documents are called Jupyter notebooks, and they are stored in your Google Drive, just like Google Docs, Sheets or Slides.</p>
+
+<p>Jupyter notebooks contain both prose (such as text, graphs, and images) as well as code.</p>
+
+<p>You can also download them to your local drive (with the file extension <code class="highlighter-rouge">.ipynb</code>) or store them on <a href="https://github.com/" target="_blank">Github</a>, which is a cloud-based public repository for code and documents.</p>
+
+<p>I’ve built Jupyter notebooks for each step of building your own image classifier, so we can just run them one after another until we’ve built our image classifier.</p>
+
+<p>The nice thing is, because Jupyter notebooks contain both text and code, I’ve put in explanations about what the code is doing alongside the actual code (kind of like code comments, but better formatted.)</p>
+
+<h2 id="running-your-first-notebook-to-collect-images">
+<a class="anchor" href="#running-your-first-notebook-to-collect-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running your first notebook to collect images</h2>
+
+<p>Click on the button (where it says “Open in Colab” ) below to open a copy of the notebook.</p>
+
+<p>If you haven’t already logged in to Google, you’ll have to login first.</p>
+
+<p>Follow the instructions in the notebook.</p>
+
+<p><a href="https://colab.research.google.com/github/butchland/build-your-own-image-classifier/blob/master/colab-build-image-dataset.ipynb" target="_blank"><img src="https://raw.githubusercontent.com/butchland/build-your-own-image-classifier/master/images/colab-badge.svg" alt="Open In Colab"></a></p>
+
+<p>At the end of the steps in that notebook, you should have a labeled image dataset for your image classifier stored on your Google Drive.</p>
+
+<p><em>(If you didn’t modify the default project name, the file <code class="highlighter-rouge">pets.tgz</code> should be in your Google Drive under the folder <code class="highlighter-rouge">/My Drive/build-your-own-image-classifier/data/pets</code>)</em></p>
+
+<p><strong>IMPORTANT</strong>: Make sure to terminate your Colab session once you’ve completed this task <em>(in order to avoid using up unneccesary resources)</em>.</p>
+
+<h2 id="cleaning-your-image-dataset">
+<a class="anchor" href="#cleaning-your-image-dataset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cleaning your Image Dataset</h2>
+
+<p>Your next step is to clean that dataset.</p>
+
+<p>I’ve created another notebook do this (this makes it easy to keep the notebook short and easy to understand).</p>
+
+<p>So click again on the notebook below.</p>
+
+<p><a href="https://colab.research.google.com/github/butchland/build-your-own-image-classifier/blob/master/colab-clean-image-dataset.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+
+<p>After running the notebook above, you should now have a cleaned up image dataset stored on your Google Drive.</p>
+
+<p><em>(If you didn’t modify the default project name, the file <code class="highlighter-rouge">cleaned_pets.tgz</code> should be in your Google Drive under the folder <code class="highlighter-rouge">/My Drive/build-your-own-image-classifier/data/pets</code>)</em></p>
+
+<h2 id="building-a-neural-network-image-classifier">
+<a class="anchor" href="#building-a-neural-network-image-classifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building a Neural Network Image Classifier</h2>
+
+<p>You’re now ready to build a Neural Network Image Classifier.</p>
+
+<p>This step is also known as training a neural network model.</p>
+
+<p>In addition to training the model, we also need to export it to what is known as a “pickle” format (into the file named <code class="highlighter-rouge">export.pkl</code>).</p>
+
+<p>Again, click on the button below and follow the steps outlined in the notebook.</p>
+
+<p><a href="https://colab.research.google.com/github/butchland/build-your-own-image-classifier/blob/master/colab-build-image-classifier.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+
+<p>At the end of running this notebook, you should have an exported classifier(<code class="highlighter-rouge">export.pkl</code>) in your Google drive.</p>
+
+<p><em>(If you didn’t modify the default project name, the file <code class="highlighter-rouge">export.pkl</code> should be in your Google Drive under the folder <code class="highlighter-rouge">/My Drive/build-your-own-image-classifier/models/pets</code>)</em></p>
+
+<h2 id="test-your-image-classifier-app-on-colab">
+<a class="anchor" href="#test-your-image-classifier-app-on-colab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Test your Image Classifier App on Colab</h2>
+
+<p>We can now test our image classifier app on Colab.</p>
+
+<p>Again, click on the button below to test the application on Colab.</p>
+
+<p><a href="https://colab.research.google.com/github/butchland/build-your-own-image-classifier/blob/master/colab-test-image-classifier.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+
+<p>Once your image classifier app has been tested, you have accomplished your goal – to build an app that runs an image classifier.</p>
+
+<p><strong>But wouldn’t it be great if you could make it easy for others to use your app?</strong></p>
+
+<p>After all, you are now ready to share it to the world (or at the very least, your friends, family and colleagues…)</p>
+
+<p><em>(<a href="/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html" target="_blank">TO BE CONTINUED IN PART 2</a>)</em></p>
+
+<p>If you liked this article, and most specially if you were able to build your own image classifier based on this article, give me a shoutout on <a href="https://twitter.com/butchland" target="_blank">my twitter account @butchland</a> or message me on the <a href="https://forums.fast.ai/u/butchland" target="_blank">fastai forums: @butchland</a>, I’d really appreciate it!</p>
+
+<h2 id="acknowledgements">
+<a class="anchor" href="#acknowledgements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledgements</h2>
+
+<p>The software used to clean your data, build your classifier and run your application is largely based on the <a href="https://docs.fast.ai" target="_blank">fastai</a> python package, written by Jeremy Howard and Sylvain Gugger.</p>
+
+<p>The <a href="https://jupyter.org/" target="_blank">Jupyter Notebook</a> environment that enables us to run interactive documents to build our image classifier won the 2017 ACM Software System Award and is widely used by scientists, researchers and students around the world.</p>
+
+<p>The software package used to collect the images (<a href="https://joedockrill.github.io/jmd_imagescraper/" target="_blank">jmd_imagescraper</a>) was built by Joe Dockrill (<a href="https://forums.fast.ai/u/joedockrill" target="_blank">@joedockrill</a>), one of the students of the fast.ai course.</p>
+
+<hr>
+<script >
+      var toc_button = document.getElementById('show_toc');
+      var toc_nav = document.getElementsByClassName('section-nav')[0];
+      toc_nav.style.display = 'none'; // hide on initial display
+      var toggle_toc = function(e){
+        if (toc_button.innerText === 'Hide TOC') {
+          toc_button.innerHTML = 'Show TOC';
+          toc_nav.style.display = 'none';
+        } else {
+          toc_button.innerHTML = 'Hide TOC';
+          toc_nav.style.display = 'block';
+        }
+        // e.target.preventDefault();
+        return false;
+      }; 
+      toc_button.addEventListener('click', toggle_toc);    
+    </script></div><a class="u-url" href="/butchland-machine-learning-notes/machine%20learning/2020/09/21/byoic-on-colab.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/butchland-machine-learning-notes/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/butchland-machine-learning-notes/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My explorations in machine learning</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/butchland" title="butchland"><svg class="svg-icon grey"><use xlink:href="/butchland-machine-learning-notes/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
