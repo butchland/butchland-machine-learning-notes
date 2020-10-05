@@ -5,6 +5,7 @@ description: A beginning beginner's step by step guide to creating cool image cl
 categories: [machine learning]
 title: Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive (Part 2)
 hidden: false
+image: images/image-classifier-logo.png
 ---
 ![trained a neural net](https://imgs.xkcd.com/comics/trained_a_neural_net.png)
 
@@ -18,7 +19,7 @@ Here's the [link to Part 1]({{ "machine%20learning/2020/09/21/byoic-on-colab.htm
 
 ## Sharing your app to the world
 
-In order to share it to the world, we will be using [Binder](https://mybinder.org), another cloud based service that can run Jupyter notebooks as applications (much like Colab can also run Jupyter notebooks).
+In order to share it to the world, we will be using [Binder](https://mybinder.org){:target="_blank"} , another cloud based service that can run Jupyter notebooks as applications (much like Colab can also run Jupyter notebooks).
 
 The difference is that Colab is an interactive editor environment (allowing you to edit and run your Jupyter notebooks) while Binder is just for running your Jupyter notebooks as applications.
 
@@ -106,7 +107,7 @@ If you followed the steps above, you now should have image classifier running on
 
 ## Want to learn more?
 
-If you want to learn more (we've just scratched the surface), take this totally free course (no Ads!) called [Practical Deep Learning for Coders](https://course.fast.ai){:target="_blank"}  -- it will teach you Deep Learning from top to bottom, using running code, on Jupyter notebooks like the one we used on Colab, and build useful applications beyond the simple image classifier we built here.
+If you want to learn more (we've just scratched the surface), take this totally free course (no Ads!) called [Practical Deep Learning for Coders](https://course.fast.ai){:target="_blank"}  -- it will teach you Deep Learning from top to bottom, using running code, on Jupyter notebooks like the ones we used on Colab, and build useful applications beyond the simple image classifier we built here.
 
 You can also join an [inclusive global learning community](https://forums.fast.ai){:target="_blank"}  that welcomes beginners and experts alike and ready to help you start your deep learning journey.
 

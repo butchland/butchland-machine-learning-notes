@@ -5,6 +5,7 @@ description: A beginning beginner's step by step guide to creating cool image cl
 categories: [machine learning]
 title: Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive
 hidden: false 
+image: images/image-classifier-logo.png
 ---
 ![trained a neural net](https://imgs.xkcd.com/comics/trained_a_neural_net.png)
 
@@ -24,7 +25,7 @@ _Play it with for a while (make sure you upload some photos). Check out how well
 
 ## What's an image classifier?
 
-_Hopefully, you clicked on the "launch binder" button above and played with the pet classifier app before coming back here to continue reading the article._
+_I hope you clicked on the "launch binder" button above and played with the pet classifier app before coming back here to continue reading the article._
 
 If you did play around with app above _(like I told you to)_, you'd know that an _image classifier_ classifies images. 
 
