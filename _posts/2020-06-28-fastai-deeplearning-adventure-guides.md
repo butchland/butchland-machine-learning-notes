@@ -3,29 +3,29 @@ toc: true
 layout: post
 description: A proposal for making the fast.ai deep learning course more effective
 categories: [fastai]
-title: Fast.ai Deep Learning Adventure Guides (Part 1)
+title: fast.ai Deep Learning Adventure Treks (Part 1)
 image: images/dora-map-explorer.png
 ---
 ![dora explorer map]({{ "images/dora-map-explorer.png" | relative_url }} "Dora the Explorer Map - credits to https://www.mobygames.com/game/windows/dora-the-explorer-swipers-big-adventure/screenshots")
-# FastAI Deep Learning Adventure Guides (Part 1 - Rationale)
+# fast.ai Deep Learning Adventure Treks (Part 1 - Rationale)
 
 ## Summary
 
-**FastAI Deep Learning Adventure Guides** is an initiative to provide first-time fastai learners with a more formalized, structured study group, with a fixed schedule, led by more experienced fastai community members on a volunteer basis, to make the online course (MOOC version) more engaging and effective specially for non-programmers.
+**fast.ai Deep Learning Adventure Treks** is an initiative to provide first-time fast.ai learners with a more formalized, structured study group, with a fixed schedule, led by more experienced fast.ai community members on a volunteer basis, to make the online course (MOOC version) more engaging and effective specially for non-programmers.
 
 ## Rationale
 
-### My fastai experience
+### My fast.ai experience
 
-When I first joined the fastai MOOC (Practical Deep Learning for Coders) around January last year, I first felt very enthusiastic and energized to view the lectures, run the notebooks, and participate in the forums -- as a result, I've learned a lot from the first 4 lectures. 
+When I first joined the fast.ai MOOC (Practical Deep Learning for Coders) around January last year, I first felt very enthusiastic and energized to view the lectures, run the notebooks, and participate in the forums -- as a result, I've learned a lot from the first 4 lectures. 
 
-But as the weeks passed, my interest waned, not because I wasn't learning anything -- quite the opposite -- I learned more from the fastai MOOC about applying Deep Learning in the real world than I did from Andrew Ng's Machine Learning course from Coursera. 
+But as the weeks passed, my interest waned, not because I wasn't learning anything -- quite the opposite -- I learned more from the fast.ai MOOC about applying Deep Learning in the real world than any other ML course I had previously taken. 
 
-I still listened to the last 3 lectures, I but didn't do the additional coursework that would have cemented the concepts deep into my mind.
+I still listened to the last 3 lectures, I but didn't do the additional coursework that would have cemented the concepts into my mind.
 
 By the time the 2nd part of the course came, I had an even harder time catching up, and thus ended my interest in the latter parts of the Part 2 of the course.
 
-A major factor for this waning interest is that learning remotely can be quite isolating -- and despite having a fantastic and supportive community in the forums, I felt at a loss in figuring out what personal projects I could pursue to further cement my understanding of the topics. 
+A major factor for this waning interest is that learning remotely can be quite isolating -- and despite having a fantastic and supportive community in the forums, I felt at a loss in figuring out what personal projects I could pursue to further deepen my understanding of the topics. 
 
 Though I tried to maintain a weekly schedule (following the live course's pace), there was nothing that really pushed me to complete something each week.
  
@@ -46,33 +46,34 @@ More importantly, the Unofficial Study Group resolved to continue meeting even a
 It has since evolved into 3 related activities:
 * A biweekly meeting for presenting projects such as kaggle competitions, and blog posts or software projects
 * A weekly book rereading where participants set aside a 3 hour block of time to read a fastbook chapter followed by 30 minute discussion
-* An accountability mini-group where we meet weekly to discuss our weekly learning goals and encourage accountability for those goals 
+* An accountability mini-group where we meet weekly to discuss our weekly learning goals and encourage accountability for those goals. 
 
 ### Lessons learned
 
 For me, these activities have not only been effective in keeping my interest in the course (aside from participating in the forum discussions) but have also helped relieve the isolation brought on by the COVID-19 pandemic quarantine.
 
-Aside from these, the fastai community has (especially during the live lectures) also provided additional activities -- I would highlight the videos and meetings on the fastai source code review as well as other videos by Zach Mueller.
+Aside from these, the fast.ai community has (especially during the live lectures) also provided additional activities -- I would highlight the videos and meetings on the fastai source code review as well as other videos by Zach Mueller.
  
-These resources have all helped enrich my learning experience, but I think the social experience given by an online study group was the most effective addition to make my fastai learning experience more effective. 
+These resources have all helped enrich my learning experience, but I think the social experience given by an online study group was the most effective addition to make my fast.ai learning experience more effective. 
 
 ### Suggestions for Improvement
 
-Having had a long experience with conducting trainings on software development, I have always thought about how to make the online fastai learning experience more effective not only for myself but for others like me. 
+Having had a long experience with conducting trainings on software development, I have always thought about how to make the online fast.ai learning experience more effective not only for myself but for others like me. 
 
-I totally support fastai's goal of democratizing AI and Deep Learning and making it more accessible. 
+I totally support fast.ai's goal of democratizing AI and Deep Learning and making it more accessible. 
 
 An important part of this effort is making it more accessible outside of the US, in less developed countries like Asia and Africa (which is why making the lecture transcripts and captions available in other languages is also important).
 
 Also important is making the community more diverse and inclusive, especially in encouraging people from different backgrounds to join the community, making them feel welcome and helping them achieve success in learning deep learning so they can apply it to their domains and societies.
 
-I think one area where the fastai support is especially lacking is helping those learners who may not have a programming background.
+I think one area where the fast.ai support is especially lacking is helping those learners who may not have a programming background.
 
-While the fastai's "whole game" approach and goals encourages people who may not have a strong programming background to learn deep learning and apply it to their own fields, I think we can provide better ways to support them and get over the initial hump of learning the python basics (plus other software development related stuff like git, using the bash command line, etc.).
+While the fast.ai's "whole game" approach and goals encourages people who may not have a strong programming background to learn deep learning and apply it to their own fields, I think we can provide better ways to support them and get over the initial hump of learning the Python basics (plus other software development related stuff like git, using the bash command line, etc.).
 
-I think this is quite possible for the fastai community to achieve -- given that the majority of its members, I believe, do have programming chops to teach the other learners who might be having difficulty in that area.
+I think this is quite possible for the fast.ai community to achieve -- given that the majority of its members, I believe, do have programming chops to teach the other learners who might be having difficulty in that area.
 
-For these reasons, and based on my experiences, I have come to propose the **FastAI Deep Learning Adventure Guides** as an initiative to help make the online fastai learning experience more effective.
+For these reasons, and based on my experiences, I have come to propose the **fast.ai Deep Learning Adventure Treks** program as an initiative to help make the online fast.ai learning experience more effective.
 
-_to be continued to **Part 2 -- Components and Roadmap**_ 
+_continued on to_ **[Part 2]({{ "fastai/2020/07/06/fastai-deeplearning-adventure-guides-part2.html" | relative_url }})** which covers the program's vision and use cases.
+
 
