@@ -59,9 +59,9 @@ The goal of the fast.ai Deep Learning Adventure Treks program is to help learner
 
 #### A Deep learning expedition
 
-* Hue finds out about the fast.ai Deep Learning Adventure Treks.  She looks for and finds a program starting in about a week with a schedule geared for her timezone.
+* Hue finds out about the fast.ai Deep Learning Adventure Treks. She looks for and finds a program starting in about a week with a schedule geared for her timezone.
 * She signs up and attends an online orientation via a Zoom call. This particular Adventure Trek program is run by Zach, a long time fast.ai volunteer. She's also happy to find that Nadja, a fellow school alumni, has also signed up for the same group. 
-* As part of the program requirements, they sign a fast.ai Deep Learning Adventure Trekker's agreement that asks for their commitment to the community's values of inclusion and respect for each member as well as to try their best to completing the program. They also commit to helping out other participants and contribute to the community in the future.
+* As part of the program requirements, they sign a fast.ai Deep Learning Adventure Trekker's agreement that asks for their commitment to the community's values of inclusion and respect as well as to exert their best efforts to completing the program. They also commit to helping out other participants and contribute to the community in the future.
 * The orientation also included introductions as well as some online social games to break the ice among the group members.
 * She and her fellow expedition members (all 7 of them) are given a proposed schedule by Zach, their guide. They discuss it and modify it based on their personal schedules (A sample schedule is provided below).
 * Based on her schedule, she requested if she could skip the group video watching activities, but promised to join the discussion after (she planned to watch the videos on her daily commute instead) 
