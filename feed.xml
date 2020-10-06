@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" rel="self" type="application/atom+xml" /><link href="https://butchland.github.io/butchland-machine-learning-notes/" rel="alternate" type="text/html" /><updated>2020-10-05T11:55:40-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/feed.xml</id><title type="html">Butch Landingin’s Machine Learning Notes</title><subtitle>My explorations in machine learning</subtitle><entry><title type="html">Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive (Part 2)</title><link href="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html" rel="alternate" type="text/html" title="Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive (Part 2)" /><published>2020-10-05T00:00:00-05:00</published><updated>2020-10-05T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html">&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/trained_a_neural_net.png&quot; alt=&quot;trained a neural net&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://butchland.github.io/butchland-machine-learning-notes/feed.xml" rel="self" type="application/atom+xml" /><link href="https://butchland.github.io/butchland-machine-learning-notes/" rel="alternate" type="text/html" /><updated>2020-10-06T08:25:50-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/feed.xml</id><title type="html">Butch Landingin’s Machine Learning Notes</title><subtitle>My explorations in machine learning</subtitle><entry><title type="html">Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive (Part 2)</title><link href="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html" rel="alternate" type="text/html" title="Build (and Run!) Your Own Image Classifier using Colab, Binder, Github, and Google Drive (Part 2)" /><published>2020-10-05T00:00:00-05:00</published><updated>2020-10-05T00:00:00-05:00</updated><id>https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2</id><content type="html" xml:base="https://butchland.github.io/butchland-machine-learning-notes/machine%20learning/2020/10/05/byoic-on-colab-part2.html">&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/trained_a_neural_net.png&quot; alt=&quot;trained a neural net&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;building-your-own-image-classifier-is-fun&quot;&gt;Building your own image classifier is fun!&lt;/h1&gt;
 
@@ -92,13 +92,13 @@
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;That building image classifiers doesn’t require you to have deep pockets.&lt;/p&gt;
+    &lt;p&gt;Learning to do &lt;em&gt;Deep Learning&lt;/em&gt; (of which building Image Classifiers is part of) is definitely within the reach of ordinary folks like us.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;That building image classifiers doesn’t require a PhD &lt;em&gt;(not that having one is bad, just not required for mastering Deep Learning)&lt;/em&gt;.&lt;/p&gt;
+    &lt;p&gt;You don’t need to have deep pockets to do Deep Learning.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;It also doesn’t require lots of math &lt;em&gt;(maybe some, but not a lot)&lt;/em&gt;.&lt;/p&gt;
+    &lt;p&gt;You don’t always need to have lots of data to do Deep Learning.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
