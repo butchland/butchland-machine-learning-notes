@@ -99,11 +99,11 @@ If you followed the steps above, you now should have image classifier running on
 
 ## What we learned
  
-* That building image classifiers doesn't require you to have deep pockets.
+* Learning to do _Deep Learning_ (of which building Image Classifiers is part of) is definitely within the reach of ordinary folks like us.
 
-* That building image classifiers doesn't require a PhD _(not that having one is bad, just not required for mastering Deep Learning)_.
+* You don't need to have deep pockets to do Deep Learning.
 
-* It also doesn't require lots of math _(maybe some, but not a lot)_.
+* You don't always need to have lots of data to do Deep Learning.
 
 ## Want to learn more?
 
